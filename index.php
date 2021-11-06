@@ -1,4 +1,6 @@
-<p>Ovo je neki neivdeno doba tekst...</p><?php
+<p>Ovo je neki neivdeno dobar tekst...</p>
+
+<?php
 echo "<h1>Dobro dosli na moju web stranicu</h1>";
 echo "Rezultat je: " ;# jednolinijski kometar echo 2+2;echo 2+2;
 
@@ -12,6 +14,7 @@ echo "Rezultat je: " ;# jednolinijski kometar echo 2+2;echo 2+2;
 ?>
 <h2>Naslov broj 2</h2>
 <?php
+
 $ime = "John";
 $prezime = "Wayne";
 $broj_godina = 99;
