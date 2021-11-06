@@ -20,8 +20,8 @@ $prezime = "Wayne";
 $broj_godina = 99;
 $stanje_racuna = 285.89;
 
-echo "pozdrav, ".$ime." ".$prezime.". Tvoj broj godina je: ".$broj_godina;
-echo "stanje racuna: " .$stanje_racuna." KM";
+echo "pozdrav,  ".$ime." ".$prezime.". Tvoj broj godina je: " .$broj_godina;
+echo ". stanje racuna: " .$stanje_racuna." KM. ";
 echo $ime . $prezime;
 $ime_korisnika="Donald";
 $ime_korisnika="Haris";
