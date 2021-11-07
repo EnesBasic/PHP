@@ -11,7 +11,7 @@ $PI = 3.14; # varijabla sa vrijednosti PI broja
 
 
 echo $area; # ispisuje varijablu area
-echo " br / "; # ispisuje tekst i ono sto je izmedu navodnika
+echo "<br/>"; # ispisuje tekst area, a potom prelazi u novi red i ispisuje tekst perimeter 
 echo $perimeter; # ispisuje perimeter
 
 # dole slijedi zatvarajuci tag
