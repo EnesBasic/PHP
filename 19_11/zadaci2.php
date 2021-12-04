@@ -14,6 +14,7 @@
 *smanjiti ponavljanje koda upotrebom funkcije include 
 */
 
+
 echo "Ovo je ";
 include "about.php";
 echo "<br>";
@@ -27,8 +28,34 @@ include "us.php";
 echo "<br>";
 
 echo "Ovo je ";
-include "contact.php";
+#include "contact.php";
+
+echo "<br>" . "1-dio-kraj" . "<br>";
 echo "<br>";
+
+
+echo "Ovo je ";
+require "about.php";
+echo "<br>";
+
+echo "Ovo je ";
+require "home.php";
+echo "<br>";
+
+echo "Ovo je ";
+require "us.php";
+echo "<br>";
+
+echo "Ovo je ";
+require_once "contact.php";
+// ako radi inckude ne moze raditi require_once
+echo "Ovo je ";
+#include "contact.php";
+
+
+echo "<br>" . "2-dio-kraj" . "<br>";
+echo "<br>";
+
 
 ?>
 </body>
