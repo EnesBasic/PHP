@@ -2,7 +2,7 @@
 #$nizGradova=("BiH"=>"Sarajevo", "Hrvatska" => "Mostar", "Srbija" => "Beograd");
 $vrijednost = 2;
 
-# u switchu promijeniom vrijednost varijable na samo jednom mjestu 
+# u switchu promijenimo vrijednost varijable na samo jednom mjestu 
 switch($vrijednost){
     case 0:
         echo "broj je nula";
@@ -18,7 +18,9 @@ switch($vrijednost){
         break;
     }
 
-echo "<br>";
+
+echo "<br>" . "1" . "<br>";
+
 
 # a u IF uslovu moramo isto to promijeniti na tri mjesta plus mogucnosti greske
 if($vrijednost === 0){
@@ -31,7 +33,9 @@ if($vrijednost === 0){
     echo "Broj nije ni nula, ni jedan ni dva!";
 }
 
-echo "<br>";
+
+echo "<br>" . "2" . "<br>";
+
 
 # Prvi primjer upotrebe Switcha
 $status_korisnika = "7";
@@ -57,7 +61,9 @@ switch($status_korisnika){
 
 }
 
-echo "<br>";
+
+echo "<br>" . "3" . "<br>";
+
 
 # Drugi primjer upotrebe Switcha
 $naredba = "idi";
@@ -75,24 +81,33 @@ switch ($naredba){
         break;
 }
 
-echo "<br>";
 
+echo "<br>" . "4" . "<br>";
+
+
+# TERNARNI OPERATOR
 // Zamjena za if, (upit)? izvrsava se ako je upit True: Izvrsava se ako je upit False; npr:
 $broj=2;
 echo ($broj>3)?"Jeste":"Nije";
-
 $rezultat = ($broj>3)?"Jeste":"Nije";
 
-echo "<br>";
+
+echo "<br>" . "5" . "<br>";
+
 
 # a ko bi ovo htjeli napisati u if else:
-if ($broj<2)
+$broj=2;
+if($broj<3){
     $rezultat = "Jeste";
 }else{
     $rezultat = "Nije";
 }
+echo $rezultat;
 
-echo "<br>";
 
+echo "<br>" . "6" . "<br>";
+
+
+# 
 
 ?>
