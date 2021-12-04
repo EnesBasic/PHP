@@ -19,7 +19,7 @@ switch($vrijednost){
     }
 
 
-echo "<br>" . "1" . "<br>";
+echo "<br>" . "1-dio-kraj" . "<br>";
 
 
 # a u IF uslovu moramo isto to promijeniti na tri mjesta plus mogucnosti greske
@@ -34,7 +34,7 @@ if($vrijednost === 0){
 }
 
 
-echo "<br>" . "2" . "<br>";
+echo "<br>" . "2-dio-kraj" . "<br>";
 
 
 # Prvi primjer upotrebe Switcha
@@ -62,7 +62,7 @@ switch($status_korisnika){
 }
 
 
-echo "<br>" . "3" . "<br>";
+echo "<br>" . "3-dio-kraj" . "<br>";
 
 
 # Drugi primjer upotrebe Switcha
@@ -82,7 +82,7 @@ switch ($naredba){
 }
 
 
-echo "<br>" . "4" . "<br>";
+echo "<br>" . "4-dio-kraj" . "<br>";
 
 
 # TERNARNI OPERATOR
@@ -92,7 +92,7 @@ echo ($broj>3)?"Jeste":"Nije";
 $rezultat = ($broj>3)?"Jeste":"Nije";
 
 
-echo "<br>" . "5" . "<br>";
+echo "<br>" . "5-dio-kraj" . "<br>";
 
 
 # a ko bi ovo htjeli napisati u if else:
@@ -105,7 +105,7 @@ if($broj<3){
 echo $rezultat;
 
 
-echo "<br>" . "6" . "<br>";
+echo "<br>" . "6-dio-kraj" . "<br>";
 
 
 # 
