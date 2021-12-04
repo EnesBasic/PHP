@@ -19,7 +19,8 @@ switch($vrijednost){
     }
 
 echo "<br>";
-# a u IF usslovu moramo isto to promijeniti na tri mjesta plus mogucnosti greske
+
+# a u IF uslovu moramo isto to promijeniti na tri mjesta plus mogucnosti greske
 if($vrijednost === 0){
     echo "Broj je nula";
 }elseif($vrijednost === 1){
@@ -30,7 +31,30 @@ if($vrijednost === 0){
     echo "Broj nije ni nula, ni jedan ni dva!";
 }
 
+echo "<br>";
 
+$status_korisnika = "7";
+switch($status_korisnika){
+    case 0:
+        require "admin.php";
+        break;
+    case 1:
+        require "moderator.php";
+        break;
+    case 2:
+        require "user.php";
+        break;
+    case 3:
+        echo "User is blocked!";
+        break;
+    case 4:
+        echo "User is deleted!";
+        break;
+    default:
+        echo "No such user type here!";
+        break;
+
+}
 
 
 
