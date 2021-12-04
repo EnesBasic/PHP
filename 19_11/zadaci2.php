@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-# ZADATAK #11 Meni
+# ZADATAK 11 Meni
 /**Potrebno je kreirati sajt sa tri strane (home, about us i contact)
 *Tri strane sajta koriste isti meni na vrhu strane, pa je neophodno
 *smanjiti ponavljanje koda upotrebom funkcije include 
@@ -33,6 +33,14 @@ echo "Ovo je ";
 echo "<br>" . "1-dio-kraj" . "<br>";
 echo "<br>";
 
+# ZADATAK 12 Meni i Require
+/**
+Uzeti prethodnu vježbu (WebChallenge #17)
+Umjesto Include ubaciti naredbu Require
+Provjeriti kod da li je funkcionalan
+Namjerno napraviti grešku u putanju jednog od fajlova
+Provjeriti šta smo dobili na samom izlazu
+ */
 
 echo "Ovo je ";
 require "about.php";

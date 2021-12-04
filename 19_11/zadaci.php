@@ -195,7 +195,7 @@ $k = 17;
 printf("Broj 17 u binarnom sitemu je broj %b", $k);
 
 
-echo "<br>" . "5-dio-kraj" . "<br>";
+echo "<br>" . "6-dio-kraj" . "<br>";
 echo "<br>";
 
 ?>
