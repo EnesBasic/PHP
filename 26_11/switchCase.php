@@ -33,6 +33,7 @@ if($vrijednost === 0){
 
 echo "<br>";
 
+# Prvi primjer upotrebe Switcha
 $status_korisnika = "7";
 switch($status_korisnika){
     case 0:
@@ -56,9 +57,42 @@ switch($status_korisnika){
 
 }
 
+echo "<br>";
 
+# Drugi primjer upotrebe Switcha
+$naredba = "idi";
+switch ($naredba){
+    case "idi":
+    case "kreni":
+    case "pocni":
+    case "iniciraj":
+        echo "Nesto je zapoceto!";
+        break;
+    case "stani":
+    case "stopiraj":
+    case "zaustavi":
+        echo "Nesto je zaavrseno!";
+        break;
+}
 
+echo "<br>";
 
+// Zamjena za if, (upit)? izvrsava se ako je upit True: Izvrsava se ako je upit False; npr:
+$broj=2;
+echo ($broj>3)?"Jeste":"Nije";
+
+$rezultat = ($broj>3)?"Jeste":"Nije";
+
+echo "<br>";
+
+# a ko bi ovo htjeli napisati u if else:
+if ($broj<2)
+    $rezultat = "Jeste";
+}else{
+    $rezultat = "Nije";
+}
+
+echo "<br>";
 
 
 ?>
