@@ -128,7 +128,7 @@ echo $userMessage=($userStatus==1)?"Welcome user 1":(($userStatus==2)?"Welcome u
 
 <?php
 
-# 27 - Vremenska prognoza
+# 27 - Vremenska prognoza HTML
 /**Dat je sljedeći kod:
 <?php
 $currentTemperature = mt_rand(0,45);
