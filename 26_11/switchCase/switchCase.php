@@ -85,7 +85,7 @@ switch ($naredba){
 echo "<br>" . "4-dio-kraj" . "<br>";
 
 
-# TERARNI OPERATOR
+# TERNARNI OPERATOR
 // Zamjena za if, (upit)? izvrsava se ako je upit True: Izvrsava se ako je upit False; npr:
 $broj=2;
 echo ($broj>3)?"Jeste":"Nije";

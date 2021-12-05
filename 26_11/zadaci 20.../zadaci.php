@@ -121,7 +121,7 @@ $trip = 150; //dužina pređenog puta
 
 $startValue = 10; //početak puta
 $endValue = 120; //kraj puta
-$trip = 110; //dužina pređenog puta
+$trip = 170; //dužina pređenog puta
 
 $komplet_put = $endValue - $startValue;
 $predeni_put = $trip - $komplet_put;
@@ -132,13 +132,73 @@ echo "Kompletan put iznosi ".$komplet_put." kilometara <br>";
 //$predeni_put = 110
 
 if($trip > $komplet_put){
-    echo "You passed ".$predeni_put. " kilometers more than needed";
+    echo "You passed $predeni_put kilometers more than needed";
+    }elseif($trip < $komplet_put){
+    echo "You need $predeni_put kilometers to go <br>";
     }elseif($predeni_put < $komplet_put){
-    echo "<br>";
-    echo "You passed  EXACT DISTANCE";
-    }else{
-    echo "You need " .$predeni_put. " kilometers to go";
-}
+    echo "You passed  EXACT DISTANCE <br>";
+    }
 
+
+    echo "<br>" . "5-dio-kraj" . "<br>";
+    echo "<br>";
+
+
+#ZADATAK 23 Cijena proizvoda
+/**
+Napraviti program koji na osnovu cijene proizvoda (promjenljiva
+$productPrice) ispisuje da li je cijena niska, srednja ili visoka:
+Mala pomoć:
+Kreirati tri proizvoda
+Kreirati tri cijene
+Ispitati proizvod i cijenu
+Ispisati korisniku proizvod, cijenu i da li je niska, srednja ili visoka
+ */
+
+
+$ulje = 4;
+$mlijeko = 2.3;
+$secer = 1.5;
+$productPrice = 4;
+
+
+
+if($ulje < $productPrice){
+    echo "cijena ulja je mala <br>";
+    echo "ulje = $ulje productPrice = $productPrice <br>";
+    }elseif($ulje === $productPrice){
+        echo "ulje = $ulje productPrice = $productPrice <br>";
+        echo "cijena ulja je srednja <br>";
+    }else{
+        echo "ulje = $ulje productPrice = $productPrice <br>";
+        echo "cijena ulja je velika <br>";
+    }
+
+echo "<br>";
     
+if($mlijeko < $productPrice){
+    echo "cijena mlijeka je mala <br>";
+    echo "mlijeko = ".$mlijeko. " productPrice = ".$productPrice. "<br>";
+    }elseif($mlijeko === $productPrice){
+        echo "mlijeko = ".$mlijeko. " productPrice = ".$productPrice. "<br>";
+        echo "cijena mlijeka je srednja <br>";
+    }else{
+        echo "mlijeko = ".$mlijeko. " productPrice = ".$productPrice. "<br>";
+        echo "cijena mlijeka je velika <br>";
+    }
+    
+echo "<br>";
+
+if($secer < $productPrice){
+    echo "cijena secera je mala <br>";
+    echo "secer = ".$secer. " productPrice = ".$productPrice. "<br>";
+    }elseif($secer === $productPrice){
+        echo "secer = ".$secer. " productPrice = ".$productPrice. "<br>";
+        echo "cijena secera je srednja <br>";
+    }else{
+        echo "secer = ".$secera. " productPrice = ".$productPrice. "<br>";
+        echo "cijena secera je velika <br>";
+    }
+    
+
 ?>
