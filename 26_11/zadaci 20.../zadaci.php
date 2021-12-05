@@ -38,7 +38,7 @@ define("BROJ_ODSJEKA", 30);
 echo "<p>".$ime_firme. "</p>";
 
 
-echo "<br>" . "1-dio-kraj" . "<br>";
+echo "1-dio-kraj" . "<br>";
 echo "<br>";
 
 
@@ -78,6 +78,65 @@ switch($userStatus){
 echo "<br>" . "3-dio-kraj" . "<br>";
 echo "<br>";
 
+
+# ZADATAK 21 Korisničko ime i lozinka
+/**
+Problem:
+Potrebno je izvršiti provjeru korisnika.
+Korisnički podaci dolaze u promjenljivima $user i $pass, i potrebno je
+da se poklapaju sa korisničkim imenom iz promjenljive $validUser i
+šifrom iz promjenljive $validPass
+*/
+
+$user = "admin";
+$pass = "12345";
+
+$validUser = "Enes";
+$validPass = "0123";
+
+if($user===$validUser && $pass===$validPass){
+    echo "Autentifikacija potvrdjena";
+}else{
+    echo "Access Denied";
+}
+
+
+echo "<br>" . "4-dio-kraj" . "<br>";
+echo "<br>";
+
+
+# ZADATAK 22 Pređeni put
+/**Date su tri promjenljive
+$startValue = 10; //početak puta
+$endValue = 120; //kraj puta
+$trip = 150; //dužina pređenog puta
+• Potrebno je izračunati kompletnu dužinu puta ($endValue - $startValue).
+• Ukoliko je pređeni put ($trip) veći od kompletne dužine puta,treba ispisati poruku: 
+  You passed PREKORAČENA DUŽINA more than needed
+• Ukoliko je pređeni put kraći od kompletne dužine puta, treba ispisati poruku:
+  You need KOLIKO NEDOSTAJE to go
+• Ukoliko je pređeni put isti kao i kompletna dužina puta, ispisuje se poruka:
+  You passed EXACT DISTANCE
+ */
+
+$startValue = 10; //početak puta
+$endValue = 120; //kraj puta
+$trip = 110; //dužina pređenog puta
+
+$komplet_put = $endValue - $startValue;
+echo "Kompletan put iznosi ".$komplet_put." kilometara <br>";
+
+
+
+if($trip > $endValue){
+    $predeni_put = $trip - $endValue;
+    echo "You passed ".$predeni_put. " kilometers more than needed";
+    }elseif($predeni_put < $trip){
+    $missing = $trip - $komplet_put;
+    echo "You need " .$missing. " kilometers to go";
+    }else{
+    echo "You passed EXACT DISTANCE";
+    }
 
 
 ?>
