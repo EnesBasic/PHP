@@ -148,8 +148,4 @@ sljedećim izlazom:
 */
 
 
-
-
-
-
 ?>
