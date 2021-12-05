@@ -17,11 +17,11 @@ switch($vrijednost){
         echo "broj nije ni nula, ni jedan, ni dva!";
         break;
     }
+    ?>
 
+<h3>---------------------------------1-dio-kraj--------------------------------</h3>
 
-echo "<br>" . "1-dio-kraj" . "<br>";
-
-
+<?php
 # a u IF uslovu moramo isto to promijeniti na tri mjesta plus mogucnosti greske
 if($vrijednost === 0){
     echo "Broj je nula";
@@ -32,11 +32,11 @@ if($vrijednost === 0){
 }else{
     echo "Broj nije ni nula, ni jedan ni dva!";
 }
+?>
 
+<h3>---------------------------------2-dio-kraj--------------------------------</h3>
 
-echo "<br>" . "2-dio-kraj" . "<br>";
-
-
+<?php
 # Prvi primjer upotrebe Switcha
 $status_korisnika = "7";
 switch($status_korisnika){
@@ -60,11 +60,11 @@ switch($status_korisnika){
         break;
 
 }
+?>
 
+<h3>---------------------------------3-dio-kraj--------------------------------</h3>
 
-echo "<br>" . "3-dio-kraj" . "<br>";
-
-
+<?php
 # Drugi primjer upotrebe Switcha
 $naredba = "idi";
 switch ($naredba){
@@ -80,21 +80,21 @@ switch ($naredba){
         echo "Nesto je zaavrseno!";
         break;
 }
+?>
 
+<h3>---------------------------------4-dio-kraj--------------------------------</h3>
 
-echo "<br>" . "4-dio-kraj" . "<br>";
-
-
+<?php
 # TERNARNI OPERATOR
 // Zamjena za if, (upit)? izvrsava se ako je upit True: Izvrsava se ako je upit False; npr:
 $broj=2;
 echo ($broj>3)?"Jeste":"Nije";
 $rezultat = ($broj>3)?"Jeste":"Nije";
+?>
 
+<h3>---------------------------------5-dio-kraj--------------------------------</h3>
 
-echo "<br>" . "5-dio-kraj" . "<br>";
-
-
+<?php
 # a ko bi ovo htjeli napisati u if else:
 $broj=2;
 if($broj<3){
@@ -103,11 +103,5 @@ if($broj<3){
     $rezultat = "Nije";
 }
 echo $rezultat;
-
-
-echo "<br>" . "6-dio-kraj" . "<br>";
-
-
-# 
 
 ?>
