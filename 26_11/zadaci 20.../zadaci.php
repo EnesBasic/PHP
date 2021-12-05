@@ -159,46 +159,62 @@ Ispisati korisniku proizvod, cijenu i da li je niska, srednja ili visoka
 $ulje = 4;
 $mlijeko = 2.3;
 $secer = 1.5;
-$productPrice = 4;
+$productPrice = 1.5;
 
 
 
 if($ulje < $productPrice){
-    echo "cijena ulja je mala <br>";
-    echo "ulje = $ulje productPrice = $productPrice <br>";
-    }elseif($ulje === $productPrice){
-        echo "ulje = $ulje productPrice = $productPrice <br>";
-        echo "cijena ulja je srednja <br>";
+    echo "ulje = $ulje <br> productPrice = $productPrice <br>";
+    echo "cijena ulja je mala &#128521<br>";
+
+    }elseif($ulje == $productPrice){
+        echo "ulje = $ulje <br> productPrice = $productPrice <br>";
+        echo "cijena ulja je srednja &#128578<br>";
     }else{
-        echo "ulje = $ulje productPrice = $productPrice <br>";
-        echo "cijena ulja je velika <br>";
+        echo "ulje = $ulje <br> productPrice = $productPrice <br>";
+        echo "cijena ulja je velika &#128545<br>";
     }
 
 echo "<br>";
     
 if($mlijeko < $productPrice){
-    echo "cijena mlijeka je mala <br>";
-    echo "mlijeko = ".$mlijeko. " productPrice = ".$productPrice. "<br>";
-    }elseif($mlijeko === $productPrice){
-        echo "mlijeko = ".$mlijeko. " productPrice = ".$productPrice. "<br>";
-        echo "cijena mlijeka je srednja <br>";
+    echo "mlijeko = $mlijeko <br> productPrice = $productPrice <br>";
+    echo "cijena mlijeka je mala &#128521<br>";
+    }elseif($mlijeko == $productPrice){
+        echo "mlijeko = $mlijeko <br> productPrice = $productPrice <br>";
+        echo "cijena mlijeka je srednja &#128578<br>";
     }else{
-        echo "mlijeko = ".$mlijeko. " productPrice = ".$productPrice. "<br>";
-        echo "cijena mlijeka je velika <br>";
+        echo "mlijeko = $mlijeko <br> productPrice = $productPrice <br>";
+        echo "cijena mlijeka je velika &#128545<br>";
     }
     
 echo "<br>";
 
 if($secer < $productPrice){
-    echo "cijena secera je mala <br>";
-    echo "secer = ".$secer. " productPrice = ".$productPrice. "<br>";
-    }elseif($secer === $productPrice){
-        echo "secer = ".$secer. " productPrice = ".$productPrice. "<br>";
-        echo "cijena secera je srednja <br>";
+    echo "secer = $secer <br> productPrice = $productPrice <br>";
+    echo "cijena secera je mala &#128521<br>";
+    }elseif($secer == $productPrice){
+        echo "secer = $secer <br> productPrice = $productPrice <br>";
+        echo "cijena secera je srednja &#128578<br>";
     }else{
-        echo "secer = ".$secera. " productPrice = ".$productPrice. "<br>";
-        echo "cijena secera je velika <br>";
+        echo "secer = $secera <br> productPrice = $productPrice <br>";
+        echo "cijena secera je velika &#128545<br>";
     }
     
+
+#ZADATAK 24 Učitavanje stranice
+/**
+* Pokušati napraviti sajt od nekoliko strana, tako da se svaka strana
+* učitava u osnovnu stranu, na osnovu klika na dugmić
+* 
+* Pomoć:
+* ▪ Ukoliko u url browsera postavimo neki parametar na sledeći način:
+* ▪ .../index.php?page=1
+* ▪ Ovaj parametar će biti dostupan unutar php strane, kroz sljedeću promjenljivu:
+* ▪ $_GET['page']
+* ▪ Iskoristiti <a> tag za kreiranje linkova sa parametrima, te neki Lorem Ipsum tekst (lipsum.org) za
+*   stranice, te naravno include/require za učitavanje stranice u osnovnu
+*/
+
 
 ?>
