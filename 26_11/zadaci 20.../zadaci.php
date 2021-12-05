@@ -36,19 +36,19 @@ echo "<p>Stanje: ".Stanje. "</p>";
 $ime_firme="ITAcademy";
 define("BROJ_ODSJEKA", 30);
 echo "<p>".$ime_firme. "</p>";
+?>
 
+<h3>---------------------------------1-dio-kraj--------------------------------</h3>
 
-echo "1-dio-kraj" . "<br>";
-echo "<br>";
-
+<?php
 
 $a=10;
 if($a==11)echo "a je 11";echo "a nije 11";
+?>
 
+<h3>---------------------------------2-dio-kraj--------------------------------</h3>
 
-echo "<br>" . "2-dio-kraj" . "<br>";
-echo "<br>";
-
+<?php
 
 /**U aplikaciju ulazi promjenljiva $userStatus. Ova promenljiva sadrži cjelobrojnu vrijednost
 (konstantu) o tipu korisnika. Potrebno je, u odnosu na vrijednost promenljive, emitovati
@@ -74,11 +74,11 @@ switch($userStatus){
         echo "Unknown User type";
         break;
 }
+?>
 
-echo "<br>" . "3-dio-kraj" . "<br>";
-echo "<br>";
+<h3>---------------------------------3-dio-kraj--------------------------------</h3>
 
-
+<?php
 # ZADATAK 21 Korisničko ime i lozinka
 /**
 Problem:
@@ -99,12 +99,11 @@ if($user===$validUser && $pass===$validPass){
 }else{
     echo "Access Denied";
 }
+?>
 
+<h3>---------------------------------4-dio-kraj--------------------------------</h3>
 
-echo "<br>" . "4-dio-kraj" . "<br>";
-echo "<br>";
-
-
+<?php
 # ZADATAK 22 Pređeni put
 /**Date su tri promjenljive
 $startValue = 10; //početak puta
@@ -121,7 +120,7 @@ $trip = 150; //dužina pređenog puta
 
 $startValue = 10; //početak puta
 $endValue = 120; //kraj puta
-$trip = 170; //dužina pređenog puta
+$trip = 110; //dužina pređenog puta
 
 $komplet_put = $endValue - $startValue;
 $predeni_put = $trip - $komplet_put;
@@ -138,12 +137,11 @@ if($trip > $komplet_put){
     }elseif($predeni_put < $komplet_put){
     echo "You passed  EXACT DISTANCE <br>";
     }
+    ?>
 
+<h3>---------------------------------5-dio-kraj--------------------------------</h3>
 
-    echo "<br>" . "5-dio-kraj" . "<br>";
-    echo "<br>";
-
-
+<?php
 #ZADATAK 23 Cijena proizvoda
 /**
 Napraviti program koji na osnovu cijene proizvoda (promjenljiva
@@ -218,3 +216,7 @@ if($secer < $productPrice){
 
 
 ?>
+
+<h3>---------------------------------6-dio-kraj--------------------------------</h3>
+
+<?php
