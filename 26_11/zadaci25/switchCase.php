@@ -1,5 +1,4 @@
 <?php
-#$nizGradova=("BiH"=>"Sarajevo", "Hrvatska" => "Mostar", "Srbija" => "Beograd");
 $vrijednost = 2;
 
 # u switchu promijenimo vrijednost varijable na samo jednom mjestu 
@@ -103,6 +102,54 @@ if($broj<3){
     $rezultat = "Nije";
 }
 echo $rezultat;
+?>
+
+<h3>---------------------------------6-dio-kraj--------------------------------</h3>
+
+<?php
+
+#ZADATAK 26 Status korisnika i ternarni
+/**
+Problem:
+U aplikaciju ulazi status korisnika kroz promjenljivu $userStatus.
+Potrebno je uz pomoć ternarnog operatora formirati poruku u
+promjenljivoj $userMessage. 
+-Ukoliko je status 1,2 ili 3, poruka mora biti
+Welcome user. 
+-Ukoliko status nije 1,2 ili 3, poruka treba da glasi:
+Unknown user.
+ */
+
+$userStatus = 15;
+echo $userMessage=($userStatus==1)?"Welcome user 1":(($userStatus==2)?"Welcome user 2":(($userStatus==3)?"Welcome user 3":"Unknown User"));
+?>
+
+<h3>---------------------------------7-dio-kraj--------------------------------</h3>
+
+<?php
+
+# 27 - Vremenska prognoza
+/**Dat je sljedeći kod:
+<?php
+$currentTemperature = mt_rand(0,45);
+$rain
+= mt_rand(0,1)==1;
+$mud
+= mt_rand(0,1)==1;
+
+Potrebno je kreirati php aplikaciju sa
+sljedećim izlazom:
+- Ukoliko je prijavljena kiša, treba prikazati oblak i kao preporučenu odjeću: čizme
+- Ukoliko je iznad 25 stepeni, treba prikazati sunce (samo ukoliko nije prijavljena kiša),
+- I kao preporučenu odjeću prikazati majicu
+- Ukoliko je prijavljeno blato, treba, kao preporučenu odeću prikazati čizme
+- Ukoliko je ispod 26 stepeni, treba kao preporučenu odeću prikazati jaknu
+
+*/
+
+
+
+
 
 
 ?>
