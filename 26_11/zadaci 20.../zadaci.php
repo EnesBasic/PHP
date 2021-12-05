@@ -124,19 +124,19 @@ $endValue = 120; //kraj puta
 $trip = 110; //dužina pređenog puta
 
 $komplet_put = $endValue - $startValue;
+$predeni_put = $trip - $komplet_put;
+
 echo "Kompletan put iznosi ".$komplet_put." kilometara <br>";
 
 
 
-if($trip > $endValue){
-    $predeni_put = $trip - $endValue;
+if($trip > $komplet_put){
     echo "You passed ".$predeni_put. " kilometers more than needed";
-    }elseif($predeni_put < $trip){
-    $missing = $trip - $komplet_put;
-    echo "You need " .$missing. " kilometers to go";
+    }elseif($predeni_put < $komplet_put){
+    echo "You need " .$predeni_put. " kilometers to go";
     }else{
     echo "You passed EXACT DISTANCE";
     }
 
-
+    
 ?>
