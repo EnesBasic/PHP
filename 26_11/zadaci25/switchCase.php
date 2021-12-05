@@ -1,41 +1,4 @@
 <?php
-$vrijednost = 2;
-
-# u switchu promijenimo vrijednost varijable na samo jednom mjestu 
-switch($vrijednost){
-    case 0:
-        echo "broj je nula";
-    break;
-    case 1:
-        echo "broj je jedan";
-        break;
-    case 2:
-        echo "Broj je dva!";
-        break;
-    default:
-        echo "broj nije ni nula, ni jedan, ni dva!";
-        break;
-    }
-    ?>
-
-<h3>---------------------------------1-dio-kraj--------------------------------</h3>
-
-<?php
-# a u IF uslovu moramo isto to promijeniti na tri mjesta plus mogucnosti greske
-if($vrijednost === 0){
-    echo "Broj je nula";
-}elseif($vrijednost === 1){
-    echo "Broj je jedan!";
-}elseif($vrijednost === 2){
-    echo "Broj je dva!";
-}else{
-    echo "Broj nije ni nula, ni jedan ni dva!";
-}
-?>
-
-<h3>---------------------------------2-dio-kraj--------------------------------</h3>
-
-<?php
 # Prvi primjer upotrebe Switcha
 $status_korisnika = "7";
 switch($status_korisnika){
@@ -58,6 +21,43 @@ switch($status_korisnika){
         echo "No such user type here!";
         break;
 
+}
+?>
+
+<h3>---------------------------------1-dio-kraj--------------------------------</h3>
+
+<?php
+$vrijednost = 2;
+
+# u switchu promijenimo vrijednost varijable na samo jednom mjestu 
+switch($vrijednost){
+    case 0:
+        echo "broj je nula";
+    break;
+    case 1:
+        echo "broj je jedan";
+        break;
+    case 2:
+        echo "Broj je dva!";
+        break;
+    default:
+        echo "broj nije ni nula, ni jedan, ni dva!";
+        break;
+    }
+    ?>
+
+<h3>---------------------------------2-dio-kraj--------------------------------</h3>
+
+<?php
+# a u IF uslovu moramo isto to promijeniti na tri mjesta plus mogucnosti greske
+if($vrijednost === 0){
+    echo "Broj je nula";
+}elseif($vrijednost === 1){
+    echo "Broj je jedan!";
+}elseif($vrijednost === 2){
+    echo "Broj je dva!";
+}else{
+    echo "Broj nije ni nula, ni jedan ni dva!";
 }
 ?>
 
