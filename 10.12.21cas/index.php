@@ -1,5 +1,5 @@
 <?php
 
-echo "zdravo";
+echo "zdravo sta ima jos";
 
 ?>
