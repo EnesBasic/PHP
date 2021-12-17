@@ -15,6 +15,13 @@
         <input type="password" name="password" required>
         <br><br>
         <input type="submit" value="Login">
-    </form> 
+    </form>
+
+    <?php
+    if(isset($_GET["error"])){
+        echo "<div class='error'>" . $_GET["error"]. "</div>";
+    }
+    ?>
+
 </body>
 </html>
