@@ -16,12 +16,11 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
                 session_start();
                 $_SESSION["username"] = $username;
                 $_SESSION["logged"] = date("d.m.Y H:i:s");
-                header("Location: dashboard.php");}
+                header("Location: dashboard.php");
+            }else{header("Location: index.php?error = pogresno!");}
+        }
+    }else{header("Location: index.php?error = prazno!");}
+}else{header("Location: index.php?error = nije poslano!");}
 
-            else{header("Location: index.php?error = pogresni!");}}
-        }         
-            
-    else{header("Location: index.php?error = username ili password su prazni!");}}
-else{header("Location: index.php?error = username ili password nisu poslani!");}
 
 ?>
