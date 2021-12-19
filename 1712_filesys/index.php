@@ -10,7 +10,7 @@ $sadrzaj2 = 1234567890;
 file_put_contents("proba2.txt", $sadrzaj2);
 
 $sadrzaj3 = array("korisnik1", "korisnik2", "korisnik3");
-file_put_contents("proba3.txt", $sadrzaj3);
+file_put_contents("proba3.php", $sadrzaj3);
 
 //echo $_SERVER["DOCUMENT_ROOT"];
 
