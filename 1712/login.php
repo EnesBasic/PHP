@@ -11,14 +11,18 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
         $username = $_POST["username"];
         $password = $_POST["password"];
 
+        $logged_user = 0;
         foreach($korsinici as $korisnik){
             if ($korisnik["username"] === $username && $korisnik["password"] === $password){
                 session_start();
                 $_SESSION["username"] = $username;
                 $_SESSION["logged"] = date("d.m.Y H:i:s");
                 header("Location: dashboard.php");
-            }else{header("Location: index.php?error = pogresno!");}
+                return;
+            }
         }
+        if($logged_user == 0){
+            header("Location: index.php?error = pogresno!");}
     }else{header("Location: index.php?error = prazno!");}
 }else{header("Location: index.php?error = nije poslano!");}
 
