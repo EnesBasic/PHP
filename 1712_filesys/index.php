@@ -44,6 +44,14 @@ foreach($procitani_sadrzaj2 as $korisnik){
     echo $korisnik["username"] . " " . $korisnik["password"] . "<br>";
 }
 
+$procitani_sadrzaj2[]=array("username"=>"Nikola", "password"=>"12345678");
+file_put_contents("proba6.php", json_encode($sadrzaj2));
+
+echo "<br><br>";
+
+foreach($procitani_sadrzaj2 as $korisnik){
+    echo $korisnik["username"] . " " . $korisnik["password"] . "<br>";
+}
 
 //echo $_SERVER["DOCUMENT_ROOT"];
 
