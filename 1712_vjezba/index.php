@@ -23,6 +23,7 @@
     }
     ?>
 
+    <a href="register.php">Registruj se!</a>
 
 </body>
 </html>
