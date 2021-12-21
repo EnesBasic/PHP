@@ -36,7 +36,6 @@
         }else{echo "<span> Prazno!</span>";}
     }else{echo "<span> Nije poslano!!</span>";}
 
-
     ?>
 
 </body>
