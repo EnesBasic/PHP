@@ -25,7 +25,7 @@
 
             if(file_exists("korisnici.json")){
                 $korisnici = file_get_contents("korisnici.json");
-                $korisnici = json_decode(json_decode, true);
+                $korisnici = json_decode($korisnici, true);
             }else{
                 $korisnici = array();
             }
