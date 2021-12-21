@@ -6,7 +6,7 @@ if(file_exists("sadrzaj.txt")){
 
     //zapocinjemo output buffering
     ob_start();
-
+    
     //stavljamo regularni kod koji bi sei inace izvrio
     for($i = 0; $i < 10000; $i++){
         echo "Hello world <br>";
