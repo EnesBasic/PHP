@@ -16,13 +16,12 @@
         <br><br>
         <input type="submit" value="Login">
     </form>
-
     <?php
     if(isset($_GET["error"])){
         echo "<div class='error'>" . $_GET["error"]. "</div>";
     }
+    
     ?>
-
     <a href="register.php">Registruj se!</a>
 
 </body>
