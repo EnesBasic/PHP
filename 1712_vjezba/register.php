@@ -22,19 +22,25 @@
         if(!empty($_POST["username"]) && !empty($_POST["password"])){
             $username = $_POST["username"];
             $password = $_POST["password"];
+
             if(file_exists("korisnici.json")){
                 $korisnici = file_get_contents("korisnici.json");
                 $korisnici = json_decode(json_decode, true);
             }else{
-                $korisnici = array();}
-            
-            $korisnici[] = array("username"=> $username, "password"=>$password);
+                $korisnici = array();
+            }
+
+            $korisnici[] = array("username" => $username, "password" => $password);
             file_put_contents("korisnici.json", json_encode($korisnici));
             header("Location: index.php");
 
             
-        }else{echo "<span> Prazno!</span>";}
-    }else{echo "<span> Nije poslano!!</span>";}
+        }else{
+              echo "<span> Prazno!</span>";
+        }
+    }else{
+          echo "<span> Nije poslano!!</span>";
+    }
 
     ?>
 

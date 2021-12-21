@@ -1,21 +1,31 @@
 <?php
 
-$usernameDB = "korisnik";
-$passwordDB = "1234";
-
 if(isset($_POST["username"]) && isset($_POST["password"])){
-    if(!empty($_POST["username"])&& !empty($_POST["password"])){
+    if(!empty($_POST["username"]) && !empty($_POST["password"])){
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-        if($username === $usernameDB && $password === $passwordDB){
-            session_start();
-            $_SESSION["username"] = $username;
-            $_SESSION["logged"] = date("d.m.Y H:i:s");
-            header("Location: dashboard.php");}
+        $korisnici = file_get_contents("korisnici.json");
+        $korisnici = json_decode($korisnici, true);
 
-            else{header("Location: index.php?error = username ili password su pogresni!");}}
-    else{header("Location: index.php?error = username ili password su prazni!");}}
-else{header("Location: index.php?error = username ili password nisu poslani!");}
+        $user_logged = 0;
+        foreach($korisnici as $korisnik){
+            if($username === $korisnik["username"] && $password === $korisnik["password"]){
+                session_start();
+                $_SESSION["username"] = $korisnik["username"];
+                $_SESSION["logged"] = date("d.m.Y H:i:s");
+                header("Location: dashboard.php");
+                return;
+            }
+        }
+        if($user_logged == 0){
+            header("Location: index.php?error = pogresno!");
+        }
+    }else{
+        header("Location: index.php?error = prazno!");
+    }
+}else{
+    header("Location: index.php?error = nisu poslani!");
+}
 
 ?>
