@@ -3,6 +3,12 @@
 			<div id="bg"></div>
 			<div id="overlay"></div>
 			<div id="main"></div>
+
+			<?php
+			require "header.php";
+			require "footer.php";
+			?>
+
 		</div>
 		<script>
 			window.onload = function() { document.body.classList.remove('is-preload'); }
