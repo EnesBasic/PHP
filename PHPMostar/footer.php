@@ -1,4 +1,15 @@
-	<!-- Footer -->
-    <footer id="footer">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+		<!-- Footer -->
+		<footer id="footer">
 						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
 					</footer>
+</body>
+</html>
