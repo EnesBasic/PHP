@@ -13,6 +13,7 @@
             echo "<p>". $_GET["message"] . "</p>";
         }
     ?>
+
     <form action="" method="POST">
         <label for="username">Input your username</label>
         <input type="text" name="username" placeholder="...username..." required>
@@ -22,6 +23,8 @@
         <br><br>
         <input type="submit" value="LogIN">
     </form>
+
+    
     <?php
  
     ?>

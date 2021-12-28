@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
     <body>
+        <h1>Registering</h1>
         <form action="" method="POST">
             <label for="username">Input your username</label>
             <input type="text" name="username" required>
