@@ -8,21 +8,17 @@
 </head>
 <body>
     <form action="" method="POST">
-    <label for="text">Unesite username</label>
-    <input type="text" name="username">
-
-
-
-
-
+        <label for="text">Unesite username: </label>
+        <input type="text" name="username">
+        <br><br>
+        <label for="text" method="POST">Unesite password: </label>
+        <input type="password" name="password">
+        <br><br>
+        <input type="submit" name="submit">
+        <br><br>
     </form>
 
-
-
-
-
     <?php
-
 
 ?>
 </body>
