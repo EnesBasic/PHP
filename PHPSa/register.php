@@ -21,7 +21,7 @@
     <?php
         if(isset($_POST["username"])&& isset($_POST["password"])){
             if(!empty($_POST["username"]) && !empty($_POST["password"])){
-                
+
                 if(file_exists("users.json")){
                     $users = file_get_contents("users.json");
                     $users = json_decode($users, true);
@@ -40,7 +40,7 @@
                     echo "<span style = 'color: red;'>Error : File not saved!</span>";
                 }
             }else{
-                echo "<span style = 'color:red;'>You entered empty fields!</span>";
+                echo "<span style = 'color: red;'>You entered empty fields!</span>";
             }
         }
 
