@@ -9,10 +9,10 @@
 <body>
     <form action="" method="POST">
         <label for="text">Unesite username: </label>
-        <input type="text" name="username" required>
+        <input type="text" name="username">
         <br><br>
         <label for="text" method="POST">Unesite password: </label>
-        <input type="password" name="password" required>
+        <input type="password" name="password">
         <br><br>
         <input type="submit" value="Submit">
         <br><br>
@@ -25,9 +25,9 @@
                 if(file_exists("users.json")){
                     $users = file_get_contents("users.json");
                     $users = json_decode($users, true);
-                }else{
+                    }else{
                     $users = array();
-                }
+                    }
 
                 $username = $_POST["username"];
                 $password = $_POST["password"];
@@ -43,9 +43,6 @@
                 echo "<span style = 'color: red;'>You entered empty fields!</span>";
             }
         }
-
-
-
     ?>
 </body>
 </html>
