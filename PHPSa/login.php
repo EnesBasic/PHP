@@ -23,38 +23,34 @@
         if(isset($_POST["username"]) && isset($_POST["password"])){
             if(!empty($_POST["username"]) && !empty($_POST["password"])){
 
-                if(file_exists("users.json")){
-                    $users = file_get_contents("users.json");
-                    $users = json_decode($users, true);
-                }
+            if(file_exists("users.json")){
+                $users = file_get_contents("users.json");
+                $users = json_decode($users, true);
+            }
 
-                $username = $_POST["username"];
-                $password = $_POST["password"];
+            $username = $_POST["username"];
+            $password = $_POST["password"];
 
             $user_logged = 0;
             foreach($users as $user){
-                if($user["username"]=== $username && $user["password"] === $password){
-                    session_start();
-                    $_SESSION["username"] = $user["username"];
-                    $_SESSION["username"] = $user["password"];
-                    $_SESSION["logged"] = date("d.m.Y H:i:s");
-                    header("Location: dashboard.php?message=Successfully , please log in!");
-                    return;
-                }else{
-                    echo "<span style='color: red;'>ERROR: wrong username or password!</span>";
-                }
-            }
-            
-            if($user_logged == 0){
-                header("Location: index.php?error=username or password wrong!!!");
-            }
-
-            }else{
-                echo "<span style='color: red;'>You sent empty fields!</span>";
+                if($user["username"] === $username && $user["password"] === $password){
+                session_start();
+                $_SESSION["username"] = $username;
+                $_SESSION["password"] = $password;
+                $_SESSION["logged"] = date("d.m.Y H:i:s");
+                header("Location: dashboard.php?message=Successfully login!");
+                return;
             }
         }
 
+        if($user_logged == 0 ){
+            echo "<span style='color: red;'>ERROR wrong username or password!!!!</span>";
+        }
 
+    }else{
+            echo "<span style='color: red;'>You entered empty fields!</span>";
+        }
+    }
 
 
     ?>
