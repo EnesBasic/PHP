@@ -35,17 +35,18 @@
             foreach($users as $user){
                 if($user["username"]=== $username && $user["password"] === $password){
                     session_start();
-                    header("Location: dashboard.php?message=Successfully , please log in!");
                     $_SESSION["username"] = $user["username"];
                     $_SESSION["username"] = $user["password"];
+                    $_SESSION["logged"] = date("d.m.Y H:i:s");
+                    header("Location: dashboard.php?message=Successfully , please log in!");
                     return;
                 }else{
                     echo "<span style='color: red;'>ERROR: wrong username or password!</span>";
                 }
             }
             
-            if($user_logged==0){
-                header("Location: index.php?error=username or passord wrong!!!");
+            if($user_logged == 0){
+                header("Location: index.php?error=username or password wrong!!!");
             }
 
             }else{
