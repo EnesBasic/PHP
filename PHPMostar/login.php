@@ -26,7 +26,36 @@
 
     
     <?php
- 
+        if(isset($_POST["username"])&& isset($_POST["password"])){
+            if(!empty($_POST["username"])&& !empty ($_POST["password"])){
+                if(file_exists("users.json")){
+                    $users = file_get_contents("users.json");
+                    $users = json_decode($users, true);
+                }
+                
+                $username = $_POST["username"];
+                $password = $_POST["password"];
+
+                foreach($users as $user){
+                    if($user["username"] === $username && $user["password"]=== $password){
+                        session_start();
+                        $_SESSION["username"] = $user["username"];
+                        $_SESSION["password"] = $user["password"];
+                        $_SESSION["logged"] = date("d.m.Y H:i:s");
+                        header("Location: dashboard.php");
+                        return;
+                    }
+                }
+
+
+            }else{
+                echo "<span style='color:red;'>You sent empty fields!</span>";
+            }
+        }
+
+
+
+        
     ?>
 
 </body>
