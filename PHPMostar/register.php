@@ -29,19 +29,20 @@
             }else{
                 $users = array();   
             }
+            
             $username = $_POST["username"];
             $password = $_POST["password"];
 
             $users[] = array("username" => $username, "password" => $password);
             if(file_put_contents("users.json", json_encode($users))){
-                header("Location: login.php?message=Successfully registered, please log in!");
+                header("Location: login.php?message = Successfully registered, please log in!");
             }else{
                 echo "<span style='color:red;'>Error: File not saved!</span>";
             }
         }else{
             echo "<span style='color:red;'>You sent empty field!!!</span>";
-        }
     }
+}
     ?>
 
     </body>

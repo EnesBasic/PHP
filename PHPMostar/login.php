@@ -35,6 +35,7 @@
                 
                 $username = $_POST["username"];
                 $password = $_POST["password"];
+                $user_logged = 0;
 
                 foreach($users as $user){
                     if($user["username"] === $username && $user["password"]=== $password){
@@ -47,6 +48,9 @@
                     }
                 }
 
+                if($user_logged == 0){
+                    echo "<span style = 'color:red;'>Username or password wrong, try again!</span>";
+                }
 
             }else{
                 echo "<span style='color:red;'>You sent empty fields!</span>";
