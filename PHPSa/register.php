@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+<h1>Registering</h1>
     <form action="" method="POST">
         <label for="text">Unesite username: </label>
         <input type="text" name="username">
@@ -22,6 +23,7 @@
         if(isset($_POST["username"]) && isset($_POST["password"])){
             
             if(!empty($_POST["username"]) && !empty($_POST["password"])){
+                
                 if(file_exists("users.json")){
                     file_get_contents("users.json");
                     $users = json_decode($users, true);
