@@ -19,6 +19,7 @@
             <br>
             <input type="submit" value="Register">
         </form>
+
     <?php
     if(isset($_POST["username"]) && isset ($_POST["password"])){
         if(!empty($_POST["username"]) && !empty($_POST["password"])){
@@ -39,8 +40,9 @@
             }
         }else{
             echo "<span style='color:red;'>You sent empty field!!!</span>";
+        }
     }
-}
     ?>
+
     </body>
 </html>
