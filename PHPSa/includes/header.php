@@ -1,7 +1,12 @@
 	<!-- Header -->
 	<header id="header">
-		<h1><?php echo $user_data["firstname"].$user_data["lastname"];?> </h1>
-			<p>Security Chief &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; Never asked for this</p>
+		<h1><?php echo $user_data["firstname"] ." ". $user_data["lastname"];?></h1>
+			<p>
+			<?php echo $user_data["category1"]."&nbsp;&bull;&nbsp;";
+				  echo $user_data["category2"]."&nbsp;&bull;&nbsp;";
+				  echo $user_data["category3"];
+			?>
+			</p>
 				<nav>
 					<ul>
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>

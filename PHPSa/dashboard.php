@@ -32,6 +32,8 @@ session_start();
         <br>
         <input type="text" name="email" required placeholder="insert your email...">
         <br>
+        <input type="text" name="text1" required placeholder="insert footer text...">
+        <br>
         <input type="text" name="text1" required placeholder="insert footer link text...">
         <br>
         <input type="text" name="text2" required placeholder="insert footer link...">
@@ -39,5 +41,39 @@ session_start();
         <input type="submit" value="Insert data">
         <br>
     </form>
+    <?php
+        if(isset($_POST["firstname"]) && !empty($_POST["firstname"])){
+            $user_data = array(
+                "firstname" => $_POST["firstname"],
+                "lastname" => $_POST["lastname"],
+                "category1" => $_POST["category1"],
+                "category2" => $_POST["category2"],
+                "category3" => $_POST["category3"],
+                "twitter" => $_POST["twitter"],
+                "facebook" => $_POST["facebook"],
+                "dribbble" => $_POST["dribbble"],
+                "github" => $_POST["github"],
+                "email" => $_POST["email"],
+                "text1" => $_POST["text1"],
+                "text2" => $_POST["text2"],
+                "link" => $_POST["link"]
+            );
+            if(file_exists("users-data.json")){
+                $users_data = file_get_contents($users_data);
+                $users_data = json_decode($users_data, true);
+            }{
+                $users_data = array();
+            }
+            $users_data[$_SESSION["username"]]= $user_data;
+            if(file_put_contents("users-data.json", json_encode($users_data))){
+                echo "<br>";
+                echo "<span>Data saved!!!</span>";
+            }else{
+                echo "<span style='color: red'>ERROR in saving data!!!</span>";
+            }
+        }
+        echo "<a href='index.php?user=" . $_SESSION["username"] . "'>Pogledaj svoj profil</span>";
+        
+    ?>
 </body>
 </html>
