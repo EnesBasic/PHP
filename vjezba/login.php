@@ -9,9 +9,23 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <title>Login form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    
+    <div id="frm">
+        <form action="proccess.php" method="POST">
+            <p>
+                <label>Username:</label>
+                <input type="text" name="username" id="username">
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="password" name="password" id="password">
+            </p>
+            <p>
+                <input type="submit" id="btn" value="Login">
+            </p>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,17 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="descritpion" content="..."
-    <meta name="author" content="@Enes Basic">
-    <meta name="robots" content="nofollow">
-    <title>Login form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
-</html>
+<?php 
+
+// get values passed from login.php file
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+// to prevent mysql injection
+$username = stripcslashes($username);
+$password = stripcslashes($password);
+$username = mysql_real_escape_string($username);
+$password = mysql_real_escape_string($password);
+
+// connect to the server and select database
+mysql_connect("localhost", "../PHP/vjezba", "");
+mysql_select_db("login");
+
+// query the database for user
+$result = mysql_query("select * from users where username = '$username and password = '$password'") 
+            or die("Failed to query the database" .mysql_error());
+$row = mysql_fetch_array($result);
+if($row['username'] == $username && $row['password'] == $password){
+    echo "Login success!!! Welcome ".$row['username'];
+}else{
+    echo "Failed to login!";
+}
+
+
+
+
+?>
