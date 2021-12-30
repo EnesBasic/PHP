@@ -1,5 +1,4 @@
 <?php 
-
 // get values passed from login.php file
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -11,7 +10,7 @@ $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
 
 // connect to the server and select database
-mysql_connect("localhost", "../PHP/vjezba", "");
+mysql_connect("localhost", "root", "");
 mysql_select_db("login");
 
 // query the database for user
@@ -23,8 +22,5 @@ if($row['username'] == $username && $row['password'] == $password){
 }else{
     echo "Failed to login!";
 }
-
-
-
 
 ?>
