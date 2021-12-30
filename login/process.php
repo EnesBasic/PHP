@@ -10,7 +10,7 @@ $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
 
 // connect to the server and select database
-mysql_connect("localhost", "root", "");
+mysql_connect("localhost", "../root/PHP/vjezba", "");
 mysql_select_db("login");
 
 // query the database for user
