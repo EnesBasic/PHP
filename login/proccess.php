@@ -1,7 +1,7 @@
 <?php 
 // get values passed from login.php file
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = $_POST['user'];
+$password = $_POST['pass'];
 
 // to prevent mysql injection
 $username = stripcslashes($username);
@@ -10,11 +10,11 @@ $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
 
 // connect to the server and select database
-mysql_connect("localhost", "../root/PHP/vjezba", "");
+mysql_connect("localhost", "root", "");
 mysql_select_db("login");
 
 // query the database for user
-$result = mysql_query("select * from users where username = '$username and password = '$password'") 
+$result = mysql_query("select * from users where user = '$username and pass = '$password'") 
             or die("Failed to query the database" .mysql_error());
 $row = mysql_fetch_array($result);
 if($row['username'] == $username && $row['password'] == $password){

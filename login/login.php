@@ -16,11 +16,11 @@
         <form action="proccess.php" method="POST">
             <p>
                 <label>Username:</label>
-                <input type="text" name="username" id="username">
+                <input type="text" name="user" id="user">
             </p>
             <p>
                 <label>Password:</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="pass" id="pass">
             </p>
             <p>
                 <input type="submit" id="btn" value="Login">
