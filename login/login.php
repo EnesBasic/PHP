@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="frm">
-        <form action="proccess.php" method="POST">
+        <form action="proces.php" method="POST">
             <p>
                 <label>Username:</label>
                 <input type="text" name="user" id="user" />
