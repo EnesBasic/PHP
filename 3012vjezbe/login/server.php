@@ -36,10 +36,12 @@ if(isset($_POST['register'])) {
     if (count($errors) == 0) {
         $password = md5($password_1); // encrypt password before storing in the database( )
         $sql = "INSERT INTO users (username, email, password) 
-                         VALUES ('$username', '$email', '$password')";
+                   VALUES ('$username', '$email', '$password')";
         mysqli_query($db, $sql);
     }
 
 }
+
+
 
 ?>
