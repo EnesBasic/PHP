@@ -13,5 +13,6 @@
 </head>
 <body>
     <h1>This is Admin home page</h1>
+    <a href="login.php">Back</a>
 </body>
 </html>
