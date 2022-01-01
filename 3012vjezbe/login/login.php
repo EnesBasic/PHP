@@ -1,3 +1,18 @@
+<?php
+
+$host="localhost";
+$user="root";
+$password="";
+$db="user";
+
+$data=mysqli_connect($host, $user, $password, $db);
+if($data===false)
+{
+    die("connection_error");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +30,7 @@
     <div class="header">
         <h2>Login Form</h2>
     </div>
-        <form method="POST" action="process.php">
+        <form action="#" method="">
             <div class="input-group">
                 <label>username</label>
                 <input type="text" name="username" placeholder="Input here your username...">
