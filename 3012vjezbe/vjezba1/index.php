@@ -12,8 +12,12 @@ class Calc{
 
     public function add(){
         echo $this->number1 + $this->number2;
+        echo "<br>";
     }
 
+    public function __destruct(){
+        echo "object is destroyed";
+    }
 }
 
 $calc = new Calc(24,2);
