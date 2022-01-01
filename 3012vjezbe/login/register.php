@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="form_pos";>
-    <h1 class="title">Register</h1>
+    <h1 class="title">Register form</h1>
         <form class="forma_deg" action="" method="POST">
             <div>
                 <label class="label">Name</label>
