@@ -1,10 +1,10 @@
 <?php
 
 $host="localhost";
-$user="root";
+$korisnik="root";
 $password="";
-$db="registr";
+$db="registration";
 
-$data=mysqli_connect($host,$user,$password,$db);
+$data=mysqli_connect($host,$korisnik,$password,$db);
 
 ?>
