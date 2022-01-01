@@ -1,9 +1,20 @@
 <?php
 
-if(isset($_POST["login"])){
-    echo "working now";
+if(isset($_POST["login"]))
+{
+  
+    if(!empty($_POST["username"]) || !empty($_POST["password"]))
+    {
+        header("Location: index.php?Empty=Please fill in the blanks");
+    }
+    else
+    {
+
+    }
 }
-else{
+
+else
+{
     echo "not working now guys!!!";
 }
 
