@@ -12,7 +12,7 @@ body {
     width: 30%;
     margin: 50px auto 0px;
     color: white;
-    background: #5F9EA0;
+    background: #0a6b6f;
     text-align: center;
     border: 1px solid #B0C4DE;
     border-bottom: none;
@@ -25,7 +25,7 @@ form {
     margin: 0px auto;
     padding: 20px;
     border: 1px solid #B0C4DE;
-    background: white;
+    background: rgb(109, 97, 97);
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -51,8 +51,8 @@ form {
 .btn {
     padding: 10px;
     font-size: 15px;
-    color: white;
-    background: #5F9EA0;
+    color: rgb(0, 0, 0);
+    background: #5bff45;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }

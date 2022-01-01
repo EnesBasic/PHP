@@ -16,7 +16,7 @@
         <h2>Login</h2>
 
     </div>
-    <form method="POST" action="login.php">
+    <form method="POST" action="connection.php">
         <div class="input-group">
             <label>Username</label>
             <input type="text" name="username">
