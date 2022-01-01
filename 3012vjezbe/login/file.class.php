@@ -38,12 +38,13 @@ class File{
                 if($encode){
                     $result = json_encode($result);
                 }
+
                 if(file_put_contents($this->file)){
-                    //pokreni sessiju
-                    //otidi na zeljenu stranicu
+                    return true;
                 }
             }
         }
+        return false;
     }
 }
 
