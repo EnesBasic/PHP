@@ -13,7 +13,7 @@
 </head>
 <body style="background:#CCC;">
     <div class="header">
-        <h2>Login</h2>
+        <h2>Login Form</h2>
     </div>
         <form method="POST" action="process.php">
             <div class="input-group">
