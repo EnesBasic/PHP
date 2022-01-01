@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>This is User home page</h1>
+    <h1>This is USER HOME PAGE</h1>
+    <a href="login.php">Back</a>
 </body>
 </html>

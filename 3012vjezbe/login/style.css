@@ -56,3 +56,9 @@ form {
     border: none;
     border-radius: 3px;
 }
+
+.usr {
+    display: block;
+    text-align: center;
+    margin: 3px;
+}
