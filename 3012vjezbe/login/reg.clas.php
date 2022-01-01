@@ -3,8 +3,8 @@
 $host="localhost";
 $korisnik="root";
 $password="";
-$db="registration";
+$db="registar";
 
-$data=mysqli_connect($host,$korisnik,$password,$db);
+$data=mysql_connect($host,$korisnik,$password,$db);
 
 ?>
