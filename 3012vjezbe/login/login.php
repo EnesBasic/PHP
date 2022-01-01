@@ -10,6 +10,36 @@ if($data===false)
 {
     die("connection_error");
 }
+
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $sql="select * from login where username='".$username."'AND password='".$password."'";
+    $result = mysqli_query($data, $sql);
+
+    $row = mysqli_fetch_array($result);
+    
+    if($row["usertype"]=="user")
+    {
+        echo "user";
+    }
+
+    elseif($row["usertype"]=="admin")
+    {
+        echo "admin";
+    }
+
+    else
+    {
+        echo "Username or Password incorrect";
+    }
+
+}
+
+
+
 ?>
 
 
@@ -30,7 +60,7 @@ if($data===false)
     <div class="header">
         <h2>Login Form</h2>
     </div>
-        <form action="#" method="">
+        <form action="#" method="POST">
             <div class="input-group">
                 <label>username</label>
                 <input type="text" name="username" placeholder="Input here your username...">
