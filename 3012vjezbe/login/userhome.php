@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>This is USER HOME PAGE</h1>
+    <h1>This is USER HOME PAGE</h1><?php echo $_SESSION["username"]?>
     <a href="login.php">Back</a>
 </body>
 </html>
