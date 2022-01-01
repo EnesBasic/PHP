@@ -12,31 +12,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h2>Login</h2>
-
+    <div id="frm">
+        <form action="proces.php" method="POST">
+            <p>
+                <label>Username:</label>
+                <input type="text" id="user" name="user" />
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="password" id="pass" name="pass" />
+            </p>
+            <p>
+                <input type="submit" id="btn" value="Login" />
+            </p>
+        </form>
     </div>
-    <form method="POST" action="connection.php">
-        <div class="input-group">
-            <label>Username</label>
-            <input type="text" name="username">
-        </div>
-        <div class="input-group">
-            <label>Password</label>
-            <input type="password" name="password_1">
-        </div>
-        <div class="input-group">
-            <button type="submit" name="login" class="btn">Login</button>
-        </div>
-        <p>
-            Not yet a member ? <a href="register.php">Sign up</a>
-        </p>
-
-
-
-
-    </form>
 </body>
 </html>
-
-
