@@ -4,7 +4,7 @@
     $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = mysqli_connect('localhost', 'root',' ', 'registration');
 
 
 
@@ -35,13 +35,9 @@ if(isset($_POST['register'])) {
     //if there are no errors, save user to database
     if (count($errors) == 0) {
         $password = md5($password_1); // encrypt password before storing in the database( )
-        $sql = "INSERT INTO users (username, email, password) 
-                   VALUES ('$username', '$email', '$password')";
+        $sql = "INSERT INTO users (username, password, email) 
+                   VALUES ('$username', '$password', '$email')";
         mysqli_query($db, $sql);
     }
-
 }
-
-
-
 ?>

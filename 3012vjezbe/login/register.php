@@ -10,7 +10,7 @@
     <meta name="descritpion" content="..."
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
-    <title>Login form</title>
+    <title>Regidter form</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -20,7 +20,8 @@
     </div>
     <form method="POST" action="register.php">
         <!-- display validations errors here -->
-        <?php include('errors.php'); ?>
+        <?php include("errors.php"); ?>
+
             <div class="input-group">
                 <label>Username</label>
                 <input type="text" name="username">
