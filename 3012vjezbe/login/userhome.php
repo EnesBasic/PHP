@@ -19,6 +19,6 @@ session_start();
 </head>
 <body>
     <h1>This is USER HOME PAGE</h1><?php echo $_SESSION["username"]?>
-    <a href="login.php">Back</a>
+    <a href="logout.php">Logout</a>
 </body>
 </html>
