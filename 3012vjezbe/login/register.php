@@ -16,15 +16,15 @@
     <div class="header">
         <h2>Register</h2>
     </div>
-    
+
     <form action="" method="POST">
         <div class=input-group>
             <label for="text">Username:</label>
-            <input type="text" name="user">
+            <input type="text" name="username">
         </div>
         <div class=input-group>
             <label for="text">Password:</label>
-            <input type="password" name="pass">
+            <input type="password" name="password">
         </div>
         <div class=input-group>
             <label for="text">e-mail:</label>
