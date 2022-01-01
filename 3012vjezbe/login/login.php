@@ -23,12 +23,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     
     if($row["usertype"]=="user")
     {
-        echo "user";
+       header("Location: userhome.php");
     }
 
     elseif($row["usertype"]=="admin")
     {
-        echo "admin";
+        header("Location: adminhome.php");
     }
 
     else
