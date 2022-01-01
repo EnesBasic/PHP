@@ -16,8 +16,8 @@
     <h1 class="title">Login form</h1>
         <form class="forma_deg" action="" method="POST">
             <div>
-                <label class="label">Name</label>
-                <input class="input" type="text" name="name">
+                <label class="label">Email</label>
+                <input class="input" type="text" name="email">
             </div>
 
             <div>
@@ -26,7 +26,7 @@
             </div><br>
 
             <div>
-                <button type="submit" name="register" class="btn">Login</button>
+                <button type="submit" name="login" class="btn">Login</button>
             </div>
         </form>
     </div>

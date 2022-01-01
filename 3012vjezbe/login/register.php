@@ -33,6 +33,7 @@
             <div>
                 <button type="submit" name="register" class="btn">Register</button>
             </div>
+            
         </form>
     </div>
 </body>
