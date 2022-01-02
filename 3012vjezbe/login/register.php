@@ -17,7 +17,7 @@
         <form class="forma_deg" action="reg.clas.php" method="POST">
             <div>
                 <label class="label">Name</label>
-                <input class="input" type="text" name="name">
+                <input class="input" type="text" name="uname">
             </div>
 
             <div>
