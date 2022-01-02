@@ -8,11 +8,11 @@ $db="registar";
 
 $data=mysqli_connect($host,$korisnik,$password,$db);
 
-if(isset($_POST['register']))
+if(isset($_POST["register"]))
 {
-    $username=$_POST['uname'];
-    $email=$_POST['email'];
-    $pass=$_POST['password'];
+    $username=$_POST["uname"];
+    $email=$_POST["email"];
+    $pass=$_POST["password"];
 
     $sql="INSERT INTO korisnik(uname, email, password) VALUES
     ('$username', '$email', '$pass')";
@@ -21,7 +21,7 @@ if(isset($_POST['register']))
 
     if($result)
     {
-        echo "register success";
+       header("Location:login.php");
     }
 }
 
