@@ -11,6 +11,14 @@
     <title>Home page</title>
 </head>
 <body>
-    <h1>WELCOME USER, you have successfully registered and logged in!</h1>
+    <h1>****WELCOME HOME*****</h1>
+        <?php
+        session_start();
+        echo $_SESSION["email"];
+        echo $_SESSION["uname"];
+        ?>
+
+    <a href="logout.php">Logout</a>    
+
 </body>
 </html>

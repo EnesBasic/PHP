@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $host="localhost";
 $korisnik="root";
 $password="";
@@ -14,13 +16,21 @@ if(isset($_POST["login"]))
     $email=$_POST["email"];
     $pass=$_POST["password"];
 
-    $sql="INSERT INTO korisnik(uname, email, password) VALUES
-    ('$username', '$email', '$pass')";
+    $sql="SELECT * FROM korisnik WHERE email='".$email."' AND password='".$pass."'";
 
     $result=mysqli_query($data, $sql);
 
-    if($result)
+    $row=mysqli_fetch_array($result);
+
+    if($row)
     {
+        $_SESSION["uname"]=$username;
+        $_SESSION["email"]=$email;
         header("Location:home.php");
     }
+    else
+    {
+        echo "email or password do not match!!";
+    }
+
 }
