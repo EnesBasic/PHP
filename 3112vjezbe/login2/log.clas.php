@@ -16,7 +16,7 @@ if(isset($_POST["login"]))
     $email=$_POST["email"];
     $pass=$_POST["password"];
 
-    $sql="SELECT * FROM korisnik WHERE email='".$email."' AND password='".$pass."'";
+    $sql="SELECT * FROM korisnik WHERE uname='".$username."' AND password='".$pass."'";
 
     $result=mysqli_query($data, $sql);
 
@@ -25,7 +25,7 @@ if(isset($_POST["login"]))
     if($row)
     {
         $_SESSION["uname"]=$username;
-        $_SESSION["email"]=$email;
+        $_SESSION["password"]=$password;
         header("Location:home.php");
     }
     else

@@ -16,8 +16,8 @@
     <h1 class="title">Login form</h1>
         <form class="forma_deg" action="log.clas.php" method="POST">
             <div>
-                <label class="label">Email</label>
-                <input class="input" type="text" name="email">
+                <label class="label">Username</label>
+                <input class="input" type="text" name="uname">
             </div>
 
             <div>

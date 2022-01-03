@@ -1,3 +1,15 @@
+<?php
+
+if(!isset($_SESSION["email"]))
+{
+    header("Location: login.php");
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +23,7 @@
     <title>Home page</title>
 </head>
 <body>
-    <h1>****WELCOME HOME*****</h1>
-        <?php
-        session_start();
-        echo $_SESSION["email"];
-        echo $_SESSION["uname"];
-        ?>
-
+    <h1>****WELCOME HOME*****<?php echo $_SESSION["email"]?></h1>
     <a href="logout.php">Logout</a>    
 
 </body>
