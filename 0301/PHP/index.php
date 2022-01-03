@@ -11,7 +11,7 @@
     <title>HOME page</title>
 </head>
 <body>
-    <div>
+    <div class="all">
         <img class="slika1" src="images/BosniaFlag.png" alt="Bosnia Flag">
             <header id="header">
                 <h1>TEK TOURISM</h1> 
