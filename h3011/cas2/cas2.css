@@ -1,0 +1,32 @@
+*{
+    text-decoration: none;
+    background-color:lightgrey;
+}
+
+#container1{
+    text-align: center;
+    background-color: #b30b0b;
+    color: #FFF;
+    padding: 10px;
+    border: 5px solid #222;
+    margin: 10px;
+
+}
+
+.myklasa1{
+    width: 200px;
+    padding: 10px 5px;
+    background-color: #2ea3f2;
+    color: #FFF;
+    margin: 0 px 10 px;
+    display: inline-block;
+}
+
+#kocka{
+    background: #222;
+    width: 200px;
+    height: 150px;
+    margin: 15px 0px;
+    border: 5px solid teal;
+}
+

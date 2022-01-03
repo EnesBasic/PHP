@@ -1,0 +1,61 @@
+*{
+    font-family: sans-serif;
+}
+
+h1{
+    font-family: sans-serif;
+    color: red;
+    background-color: blueviolet;
+    font-size: 3em;
+    text-align: center;
+}
+
+p{
+    color: blue;
+}
+
+#mojlink{
+    text-decoration: none;
+    background-color: #2ea3f2;
+    color: #FFF;
+    padding: 10px 5px;
+}
+
+.mojaklasa{
+   font-size: 15px;
+}
+
+#nekiid{
+    color: #222;
+}
+
+#container .mojadrugaklasa{
+    color: red;
+}
+
+h1~p{
+    color: #222;
+}
+
+h1+p{
+    color: #b30b0b;
+}
+
+li > a{
+    color: green;
+}
+
+p.podebljana_slova{
+    font-weight: bold;
+}
+
+p.mojadrugaklasa{
+    font-size: 20px;
+}
+
+h1,h2{
+    font-size: 2em;
+    background-color: #b30b0b;
+    color: #FFF;
+}
+
