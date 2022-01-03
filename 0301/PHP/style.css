@@ -19,11 +19,12 @@ body{
 
 
 #header {
+    word-spacing: 40px;
     text-align: center;
     top: 0%;
     position: absolute;
     margin: 0px;
-    padding-left: 200px;
+    padding-left: 185px;
     font-size: 32px;
   
 }
