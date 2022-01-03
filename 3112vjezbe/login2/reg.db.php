@@ -13,9 +13,9 @@ if(isset($_POST["register"]))
     $email=$_POST['email'];
     $password=$_POST['password'];
 
-    $sql="INSERT INTO korisnik (name, email, password) VALUES('$username','$email','$password')";
+    $sql = "INSERT INTO korisnik (name, email, password) VALUES('$username','$email','$password')";
 
-    $rezult=mysqli_query($data, $sql);
+    $rezult = mysqli_query($data, $sql);
 
     if($rezult)
     {

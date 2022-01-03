@@ -14,10 +14,10 @@
 <body>
     <div class="form_pos";>
     <h1 class="title">Login form</h1>
-        <form class="forma_deg" action="log.clas.php" method="POST">
+        <form class="forma_deg" action="log.db.php" method="POST">
             <div>
                 <label class="label">Username</label>
-                <input class="input" type="text" name="username">
+                <input class="input" type="text" name="uname">
             </div>
 
             <div>
