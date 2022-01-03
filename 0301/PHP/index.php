@@ -11,8 +11,10 @@
     <title>HOME page</title>
 </head>
 <body>
-    <div class=head></div>
-        <h1>TEK TOURISM</h1>
-
+    <div>
+        <header>
+            <h1>TEK TOURISM</h1>
+        </header>
+    </div>
 </body>
 </html>
