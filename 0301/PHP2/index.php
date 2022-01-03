@@ -18,8 +18,8 @@
             </header>
         <img class="slika2" src="images/bosniaMap.jpg" alt="Bosnia Location">
       </div>
-      <main>
-
-      </main>
+      
+    <main>
+    </main>
 </body>
 </html>
