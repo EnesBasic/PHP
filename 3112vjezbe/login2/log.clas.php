@@ -8,14 +8,14 @@ $password="";
 $db="registar";
 
 
-$data=mysqli_connect($host,$korisnik,$password,$db);
+$data=mysqli_connect($host, $korisnik, $password, $db);
 
 if(isset($_POST['login']))
 {
-    $username=$_POST['username'];
-    $pass=$_POST['password'];
+    $username=$_POST["username"];
+    $password=$_POST["password"];
 
-    $sql="SELECT * FROM korisnik WHERE username=' ".$username." '   AND   password=' ".$pass." '   ";
+    $sql="SELECT * FROM korisnik WHERE username=' ".$username." '   AND   password=' ".$password." '   ";
 
     $result=mysqli_query($data, $sql);
 
@@ -23,9 +23,7 @@ if(isset($_POST['login']))
 
     if($row)
     {
-        $_SESSION["username"]=$username;
-        $_SESSION["password"]=$password;
-        header("Location:home.php");
+        header("Location: home.php");
     }
     else
     {

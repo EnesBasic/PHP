@@ -23,7 +23,7 @@ if(isset($_SESSION["username"]))
     <title>Home page</title>
 </head>
 <body>
-    <h1>****WELCOME HOME*****<?php echo $_SESSION["uname"]?></h1>
+    <h1>****WELCOME HOME*****<?php echo $_SESSION["username"]?></h1>
     <a href="logout.php">Logout</a>    
 
 </body>
