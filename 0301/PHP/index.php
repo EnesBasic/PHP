@@ -11,12 +11,15 @@
     <title>HOME page</title>
 </head>
 <body>
-    <div class="all">
+    <div>
         <img class="slika1" src="images/bosniaFlag.png" alt="Bosnia Flag">
             <header id="header">
                 <h1>TEK TOURISM</h1> 
             </header>
         <img class="slika2" src="images/bosniaMap.jpg" alt="Bosnia Location">
       </div>
+      <main>
+
+      </main>
 </body>
 </html>

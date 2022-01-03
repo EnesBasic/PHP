@@ -5,28 +5,30 @@
 }
 
 body{
-    background:rgb(177, 204, 230);
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-.all {
-    background-color: rgb(60, 60, 87);
-    border: rgb(92, 58, 61);
-    border-width: 7px;
-    border-style:solid
+main {
+    background-image:url(images/mostar.jpg);
+    background-size: 100%;
+    background-position:top;
+    width: 100vw;
+    height: 70vh;
 }
 
 
 #header {
-    word-spacing: 40px;
+    background: rgba(0,0,0,0.2);
     text-align: center;
-    top: 0%;
     position: absolute;
+    width: 100%;
+
+    word-spacing: 20px;
+    top: 0%;
     margin: 0px;
-    padding-left: 185px;
-    font-size: 32px;
-  
+    padding: 0px;
+    font-size: 28px;
 }
 
  
@@ -45,7 +47,7 @@ body{
     width: 10%;
     height: 10%;
     margin: 15px;
-    margin-left: 15px;
+    margin-left: 220px;
     padding-left: 650px;
     border-radius: 50px;
 }
