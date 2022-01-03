@@ -12,8 +12,9 @@
 </head>
 <body>
     <div>
+        
         <header>
-            <h1>TEK TOURISM</h1>
+            <h1><img class="img" src="images/BosniaFlag.png" alt="Bosnia Flag">TEK TOURISM</h1>
         </header>
     </div>
 </body>
