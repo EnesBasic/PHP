@@ -1,11 +1,19 @@
 <?php
 
+session_start();
+
 $host="localhost";
 $user ="root";
 $password="";
 $db="registar";
 
+
+
 $data=mysqli_connect($host, $user, $password, $db);
+if(($data)==false)
+{
+    die("connection_error");
+}
 
 if(isset($_POST["login"]))
 {
@@ -20,7 +28,12 @@ if(isset($_POST["login"]))
 
     if($row)
     {
+       $_SESSION['uname']=$username; 
        header("Location: home.php");
+    }
+    else
+    {
+        echo "Username or password do not match, try again!!";
     }
 }
 

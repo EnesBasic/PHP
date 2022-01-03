@@ -5,6 +5,7 @@ $user ="root";
 $password="";
 $db="registar";
 
+
 $data=mysqli_connect($host, $user, $password, $db);
 
 if(isset($_POST["register"]))
@@ -21,6 +22,7 @@ if(isset($_POST["register"]))
     {
         header("Location: login.php");
     }
+
 }
 
 ?>

@@ -8,9 +8,16 @@
     <meta name="descritpion" content="..."
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
-    <title>Home page</title>
+    <title>HOME page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
-    <h1>Welcome Home</h1>
+    <h1>Welcome HOME</h1>
+
+    <?php 
+    session_start();
+    echo $_SESSION['uname'];
+    ?>
+
 </body>
 </html>
