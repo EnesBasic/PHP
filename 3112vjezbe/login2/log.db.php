@@ -10,7 +10,7 @@ $db="registar";
 
 
 $data=mysqli_connect($host, $user, $password, $db);
-if(($data)==false)
+if($data===false)
 {
     die("connection_error");
 }

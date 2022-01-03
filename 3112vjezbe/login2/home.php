@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if(!isset($_SESSION["uname"]))
+{
+    header("Location: login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +28,7 @@
     session_start();
     echo $_SESSION['uname'];
     ?>
+    <a href="logout.php">Logout</a>
 
 </body>
 </html>
