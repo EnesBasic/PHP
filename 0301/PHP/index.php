@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="all">
-        <img class="slika1" src="images/BosniaFlag.png" alt="Bosnia Flag">
+        <img class="slika1" src="images/bosniaFlag.png" alt="Bosnia Flag">
             <header id="header">
                 <h1>TEK TOURISM</h1> 
             </header>
