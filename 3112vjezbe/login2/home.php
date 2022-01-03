@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($_SESSION["email"]))
+if(!isset($_SESSION["uname"]))
 {
     header("Location: login.php");
 }
@@ -23,7 +23,7 @@ if(!isset($_SESSION["email"]))
     <title>Home page</title>
 </head>
 <body>
-    <h1>****WELCOME HOME*****<?php echo $_SESSION["email"]?></h1>
+    <h1>****WELCOME HOME*****<?php echo $_SESSION["uname"]?></h1>
     <a href="logout.php">Logout</a>    
 
 </body>
