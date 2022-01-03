@@ -11,12 +11,19 @@
     <title>HOME page</title>
 </head>
 <body>
+
     <?php
 
-    $pet01 = new Pet();
+    include "includes/person.inc.php";
 
-    echo $pet01->owner();
+    //$pet01 = new Pet();
+    //echo $pet01->owner();
+    
+    $pet01 = new Person();
+    echo $pet01->first();
+
 
     ?>
+
 </body>
 </html>
