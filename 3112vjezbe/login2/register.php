@@ -14,7 +14,7 @@
 <body>
     <div class="form_pos";>
     <h1 class="title">Register form</h1>
-        <form class="forma_deg" action="reg.clas.php" method="POST">
+        <form class="forma_deg" action="reg.db.php" method="POST">
             <div>
                 <label class="label">Name</label>
                 <input class="input" type="text" name="uname">
