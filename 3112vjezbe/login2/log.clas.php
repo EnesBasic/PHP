@@ -16,7 +16,7 @@ if(isset($_POST["login"]))
     $email=$_POST["email"];
     $pass=$_POST["password"];
 
-    $sql="SELECT * FROM korisnik WHERE username='".$username."' AND password='".$pass."'";
+    $sql="SELECT * FROM korisnik WHERE username=' ".$username." '   AND password=' ".$pass." '   ";
 
     $result=mysqli_query($data, $sql);
 
