@@ -10,11 +10,11 @@ $data=mysqli_connect($host,$korisnik,$password,$db);
 
 if(isset($_POST["register"]))
 {
-    $username=$_POST["uname"];
+    $username=$_POST["username"];
     $email=$_POST["email"];
     $pass=$_POST["password"];
 
-    $sql="INSERT INTO korisnik(uname, email, password) VALUES
+    $sql="INSERT INTO korisnik(username, email, password) VALUES
     ('$username', '$email', '$pass')";
 
     $result=mysqli_query($data, $sql);
