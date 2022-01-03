@@ -19,7 +19,7 @@ if(isset($_POST["register"]))
 
     if($rezult)
     {
-        echo "register Success!!";
+        header("Location: login.php");
     }
 }
 
