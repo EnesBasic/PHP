@@ -11,9 +11,14 @@ body{
 }
 
 header {
-    position: relative;
+    position: absolute;
+    left: 0px;
+    top: 5px;
     text-align: center;
-    padding: 10px 35px;
+    margin-left: 200px;
+    margin-top: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
     font-size: 24px;
     border: 10px;
     border-color: lightsteelblue;
@@ -22,9 +27,9 @@ header {
 }
 
 img {
-    max-width: 50%;
-    max-height: 50%;
-    margin: 0em;
-    padding-right: 0em;
-    position: absolute;
+    max-width: 15%;
+    max-height: 15%;
+    margin: 0px;
+    margin-top: 15px;
+    padding-left: 10px;
 }
