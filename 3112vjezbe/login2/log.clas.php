@@ -10,10 +10,10 @@ $db="registar";
 
 $data=mysqli_connect($host,$korisnik,$password,$db);
 
-if(isset($_POST["login"]))
+if(isset($_POST['login']))
 {
-    $username=$_POST["username"];
-    $pass=$_POST["password"];
+    $username=$_POST['username'];
+    $pass=$_POST['password'];
 
     $sql="SELECT * FROM korisnik WHERE username=' ".$username." '   AND   password=' ".$pass." '   ";
 
