@@ -11,19 +11,20 @@ body{
 }
 
 .all {
-    background-color: rgb(114, 114, 214);
+    background-color: rgb(60, 60, 87);
     border: rgb(92, 58, 61);
-    border-width: 5px;
+    border-width: 7px;
     border-style:solid
 }
 
 
 #header {
     text-align: center;
+    text-shadow: rgb(70, 56, 56);
     top: 0px;
     position: absolute;
     margin: 0px;
-    padding-left: 280px;
+    padding-left: 200px;
     font-size: 32px;
   
 }
@@ -31,19 +32,18 @@ body{
  
 .slika1 {
     object-fit: cover;
-    width: 15%;
-    height: 15%;
+    width: 10%;
+    height: 10%;
     margin: 15px;
     margin-right: 0px;  
-    object-fit: cover;  
 }
 
 
 .slika2{
     object-fit: cover;
     top: 0px;
-    width: 15%;
-    height: 15%;
+    width: 10%;
+    height: 10%;
     margin: 15px;
     margin-left: 15px;
     padding-left: 650px;
