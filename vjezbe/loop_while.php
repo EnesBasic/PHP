@@ -8,20 +8,26 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>while</title>
+    <title>while_do while</title>
 </head>
 <body>
      <?php
-
+     
+// WHILE
         $index = 1;
-
         while($index <= 5){
             echo "$index <br>";
             $index++;
         }
 
+echo "<br><br>";
+// DO WHILE
 
-
+        $index = 6;
+        do{
+            echo "$index <br>";
+            $index++;
+        }while($index <= 5);
 
     ?>
 </body>

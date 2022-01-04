@@ -8,16 +8,34 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>do while</title>
+    <title>for</title>
 </head>
 <body>
      <?php
 
-        $index = 6;
-        do{
+        $index = 1;
+        while($index <= 5){
             echo "$index <br>";
             $index++;
-        }while($index <= 5);
+        }
+
+echo "<br>";
+
+        for($i = 1; $i <= 5; $i++){
+            echo "$i <br>";            
+        }
+
+
+echo "<br>";
+// Ispis NIZA
+        $luckyNumbers = array(4,8,14,16,23,42);
+        echo "Ipsisuje samo 3 clan niza $luckyNumbers[2] <br>";
+        
+echo "<br>";
+
+        for($i = 0; $i <= count($luckyNumbers); $i++){
+            echo "Ispisuje cijeli niz $luckyNumbers[$i] <br>";
+        }
 
     ?>
 </body>
