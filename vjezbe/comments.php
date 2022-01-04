@@ -20,28 +20,22 @@
 
     <?php
 
-        // Using it when you have 1 value and want to compare it to bunch of others
-        $grade = $_POST["grade"];
-        switch ($grade){
-            case "A":
-                echo "You did amazing";
-                break;
-            case "B":
-                echo "You did pretty good!";
-                break;
-            case "C":
-                echo "You did poorly";
-                break;
-            case "D":
-                echo "You did very bad!";
-                break;
-            case "F":
-                echo "You FAIL!";
-                break;
-            default:
-                echo "Invalid grade";
+        // comment
+        echo "comments are fun 1!";
 
-        }
+        echo "comments are fun 2!"; // this is also comment
+
+        /**
+         * these
+         * are many 
+         * lines
+         * comment
+         */
+
+        echo "comments are fun 3!"
+
+        // when some line of code making problem
+        //echo "comments are fun 4!"
 
     ?>
 </body>
