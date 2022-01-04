@@ -11,15 +11,16 @@
     <title>Calculator</title>
 </head>
 <body>
-    <form action="site.php" method="GET">
-        Name: <input type="text" name="username">
-        <input type="submit" value="submit">
+    <form action="index.php" method="get">
+        <label>Unesite broj: </label>    
+        <input type="number" name="broj1">
+        <label>Unesite broj: </label>    
+        <input type="number" name="broj2">  
+       <button type="submit" name="izvrsi">Izvrsi</button>
     </form>
     <br>
-
-    <?php
-    echo $_GET["username"];
-    ?>
-
+    Answer: <?php echo $_GET["broj1"] + $_GET["broj2"]; ?>
+    <br>
+    
 </body>
 </html>
