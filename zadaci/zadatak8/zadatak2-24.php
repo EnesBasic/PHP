@@ -10,6 +10,6 @@
     <h1>Welcome to my practice page!</h1>
     <p>Some text!</p>
     <p>Some more text.</p>
-    <?php include 'footer.php';?>
+    <?php include "footer.php";?>
 </body>
 </html>
