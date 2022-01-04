@@ -20,3 +20,5 @@ class Pet extends Person{
         return $a;
     }
 }
+
+?>
