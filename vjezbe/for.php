@@ -13,11 +13,29 @@
 <body>
      <?php
 
-        $index = 6;
-        do{
+        $index = 1;
+
+        while($index <= 5){
             echo "$index <br>";
             $index++;
-        }while($index <= 5);
+        }
+
+echo "<br>";
+
+        for($i = 1; $i <= 5; $i++){
+            echo "$i <br>";            
+        }
+
+echo "<br>";
+
+        $luckyNumbers = array(4,8,14,16,23,42);
+        echo "$luckyNumbers[2] <br>";
+        
+echo "<br>";
+
+        for($i = 0; $i <= count($luckyNumbers); $i++){
+            echo "$luckyNumbers[$i] <br>";
+        }
 
     ?>
 </body>
