@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS">
     <meta name="descritpion" content="..."
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>HOME page</title>
+    <title>while</title>
 </head>
 <body>
+     <?php
 
-    <?php
+        $index = 1;
 
-    include "includes/person.inc.php";
+        while($index <= 5){
+            echo "$index <br>";
+            $index++;
+        }
 
-    //$pet01 = new Pet();
-    //echo $pet01->owner();
-    
-    $pet01 = new Person();
-    echo $pet01->first();
+
+
 
     ?>
-
 </body>
 </html>
