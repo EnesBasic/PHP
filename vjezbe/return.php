@@ -11,18 +11,15 @@
     <title>Return</title>
 </head>
 <body>
-    <form action="" method="post">
-       Apples: <input type="checkbox" name="fruits[]" value="apples"><br>
-       Oranges: <input type="checkbox" name="fruits[]" value="oranges"><br>
-       Pears: <input type="checkbox" name="fruits[]" value="pears"><br>
-       <input type="submit" value="izvrsi">
-    </form>
-    <br>
+
     <?php
+    // echo 2^3 -> 2*2*2;
+    function cube($num){
+        return $num * $num * $num;
+    }
 
-        $fruits=$_POST["fruits"];
-        echo $fruits[0];
-
+    $cubeResult = cube(3);
+    echo $cubeResult;
     ?>
     
 </body>
