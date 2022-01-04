@@ -28,6 +28,11 @@ $sadrzaj6 = array(
 
 file_put_contents("proba6.php", json_encode($sadrzaj6));
 
+
+
+
+
+
 // Citanje iz fajlova
 
 $procitani_sadrzaj1 = file_get_contents("proba1.txt");
