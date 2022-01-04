@@ -11,22 +11,12 @@
     <title>Calculator</title>
 </head>
 <body>
-
-    <?php
-        $title = "My first Post";
-        $author = "Enes";
-        $wordCount = 400;
-
-        include "article-header.php";
-        include "includes/home.php";
-        include "useful-tools.php";
-
-
-        echo $feetInMile;
-echo "<br>";
-        sayHi("Enes");
-
-    ?>
     
+<h1>***HOME PAGE***</h1>
+<hr>
+
 </body>
 </html>
+
+
+

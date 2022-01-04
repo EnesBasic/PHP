@@ -11,11 +11,11 @@
     <title>Calculator</title>
 </head>
 <body>
-
+    <hr>
     <h2><?php echo $title; ?></h2>
-
+    <hr>
     <h4><?php echo $author; ?></h4>
-
+    <hr>
     word count : <?php echo $wordCount; ?>
 
 </body>
