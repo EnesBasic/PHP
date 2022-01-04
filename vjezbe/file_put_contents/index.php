@@ -55,6 +55,4 @@ foreach($procitani_sadrzaj2 as $korisnik){
 
 //echo $_SERVER["DOCUMENT_ROOT"];
 
-
-
 ?>
