@@ -8,19 +8,20 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Funkcije</title>
+    <title>Return</title>
 </head>
 <body>
-
+    <form action="" method="post">
+       Apples: <input type="checkbox" name="fruits[]" value="apples"><br>
+       Oranges: <input type="checkbox" name="fruits[]" value="oranges"><br>
+       Pears: <input type="checkbox" name="fruits[]" value="pears"><br>
+       <input type="submit" value="izvrsi">
+    </form>
+    <br>
     <?php
 
-    function sayHi($name, $age){
-        echo "Hello $name your age is $age <br>";
-    }
-    
-    sayHi("Enes",41);
-    sayHi("Dave", 32);
-    sayHi("Ammar", 55);
+        $fruits=$_POST["fruits"];
+        echo $fruits[0];
 
     ?>
     
