@@ -15,36 +15,23 @@
         ini_set('error_reporting', E_ALL);//prikazivanje gresaka xampa na linuxu
         ini_set( 'display_errors', 1 );//prikazivanje gresaka xampa na linuxu
      
-        class Movie {
-            public $title;
-            private $rating;
+        class Chef {
+            function makeChicken(){
+                echo "The Chef makes chicken <br>"; 
+            }
+
+            function makeSalad(){
+                echo "The Chef makes salad <br>"; 
+            }
+
+            function makeSpecialDish(){
+                echo "The Chef makes bbq ribs <br>"; 
+            }
             
-            function __construct($title, $rating){
-                $this->title = $title;
-                $this->setRating($rating);
-            }
-
-            function getRating(){
-                return $this->rating;
-            }
-
-            function setRating($rating){
-                //$this->rating = $rating;
-                if($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R" || $rating == "NR"){
-                    $this->rating = $rating;   
-                }else{
-                    $this->rating = "NR";
-                }
-
-            }
         }
-
      
-        $avengers = new Movie("Avengers", "G");
-        // G, PG, PG-13, R, NR
-
-        $avengers->setRating("asdasdsdDog");
-        echo $avengers->getRating();
+        $chef = new Chef();
+        $chef->makeChicken();
         
     ?>
 </body>
