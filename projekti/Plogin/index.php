@@ -15,7 +15,7 @@
         ini_set('error_reporting', E_ALL);//prikazivanje gresaka xampa na linuxu
         ini_set( 'display_errors', 1 );//prikazivanje gresaka xampa na linuxu
     ?>
-    <form action="" method="POST"></form>
+    <form action="login.php" method="POST"></form>
     <label>Login</label>
     <input type="text" name="username">
     <br>
@@ -24,10 +24,7 @@
     <br></br>
     <input type="submit" name="submit" value="Submit">
     <br>
-    
-
-
-    
+  
 </body>
 </html>
 
