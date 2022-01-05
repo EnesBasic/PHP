@@ -11,13 +11,7 @@
     <title>Register</title>
 </head>
 <body>
-
-    <?php
-        ini_set('error_reporting', E_ALL);//prikazivanje gresaka xampa na linuxu
-        ini_set( 'display_errors', 1 );//prikazivanje gresaka xampa na linuxu
-    ?>
-
-    <form action="login.php" method="POST">
+    <form action="includes/reg-includes.php" method="POST">
         <label>Login</label>
         <input type="text" name="username">
         <br>
@@ -27,7 +21,7 @@
         <label>Register</label>
         <input type="register" name="register">
         <br>
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit" value="Registruj se">
         <br>
     </form>
   </body>
