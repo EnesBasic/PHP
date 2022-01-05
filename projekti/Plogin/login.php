@@ -11,21 +11,17 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
         $password = $_POST["password"];
 
         foreach($korisnici as $korisnik){
-            if(($korisnici["username"] === true) && ($korisnici["password"] === true)){
+            if(($korisnici["username"] == true) && ($korisnici["password"] == true)){
                 session_start();
                 $_SESSION["username"] = $username;
                 $_SESSION["password"] = $password;
-                header("Location: dashboard.html");
+                header("Location: dashboard.php");
                 return;
             }
         }
 
     }
-
-}else{
-    echo "ERROR, Unijeli ste pogresan username ili password!";
 }
-
 
 
 
