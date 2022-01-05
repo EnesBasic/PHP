@@ -12,10 +12,10 @@
 </head>
 <body>
     <form action="includes/reg-includes.php" method="POST">
-        <label>Username</label>
+        <label for="username">Username</label>
         <input type="text" name="username">
         <br>
-        <label>Password</label>
+        <label for="password">Password</label>
         <input type="password" name="password">
         <br><br>
         <input type="submit" name="submit" value="Registruj se">

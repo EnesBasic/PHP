@@ -1,7 +1,4 @@
-<?php
- ini_set('error_reporting', E_ALL);//prikazivanje gresaka xampa na linuxu
- ini_set( 'display_errors', 1 );//prikazivanje gresaka xampa na linuxu
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,18 +10,29 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Register</title>
+    <title>Login</title>
 </head>
 <body>
+    <h1>WELCOME</h1>
+  </body>
+</html>
+
+<!--
+?php
+ ini_set('error_reporting', E_ALL);//prikazivanje gresaka xampa na linuxu
+ ini_set( 'display_errors', 1 );//prikazivanje gresaka xampa na linuxu
+?>
+
+
     <form action="" method="POST">
-        <label>Username</label>
+        <label for="username">Username</label>
         <input type="text" name="username">
         <br>
-        <label>Password</label>
+        <label for="password">Password</label>
         <input type="password" name="password">
         <br><br>
         <input type="submit" name="submit" value="Loguj se">
         <br>
     </form>
-  </body>
-</html>
+
+-->
