@@ -18,7 +18,6 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 
         $useri = array("username" => $username, "password" => $password);
         file_put_contents("baza.json", json_encode("baza.json"));
-        include "login.php"
-        header("Location: login.php");
+        header("Location: ../login.php");
 }
 ?>
