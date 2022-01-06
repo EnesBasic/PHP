@@ -12,13 +12,13 @@
 </head>
 <body>
     <form action="" method="POST">
-    <label for="username">Unesi username</label>
-    <input type="text" name="username" required>
+        <label for="username">Unesi username</label>
+        <input type="text" name="username" required>
     <br><br>
-    <label for="password">Unesi password</label>
-    <input type="text" name="password" required>
+        <label for="password">Unesi password</label>
+        <input type="text" name="password" required>
     <br><br>
-    <input type="submit" value="Registuj se">
+        <input type="submit" value="Registuj se">
     </form>
 
 <?php
