@@ -26,7 +26,9 @@
     if(isset($_GET["error"])){
         echo "<div class='error'>".$_GET["error"]."</span>";
     }
+?>
+    <a href="register.php">Registruj se!</a>
     
-    ?>
+
   </body>
 </html>
