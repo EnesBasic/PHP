@@ -1,25 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="descritpion" content="..."
-    <meta name="author" content="@Enes Basic">
-    <meta name="robots" content="nofollow">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Login</title>
-</head>
-<body>
-    <form action="dashboard.php" method="POST">
-        <label for="username">Username</label>
-        <input type="text" name="username">
-        <br>
-        <label for="password">Password</label>
-        <input type="password" name="password">
-        <br><br>
-        <input type="submit" name="submit" value="Loguj se">
-        <br>
-    </form>
-  </body>
-</html>
+<?php
+
+if(isset($_POST["username"]) && isset($_POST["password"])){
+    if(!empty($_POST["username"]) && !empty($_POST["password"])){
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        $useri = file_get_contents("baza.json");
+        $useri = json_decode($useri, true);
+
+        foreach($useri as $user){
+            if($username === $user["username"] && $password === $user["password"]){
+                session_start();
+                $_SESSION["username"] = $user["username"];
+                $_SESSION["password"] = $user["password"];
+                header("Location: dashboard.php");
+                return;
+            }
+        }
+    }else{header("Location: index.php?error=pogresno!");}
+}else{header("Location: index.php?error=prazno!");}
+
+?>

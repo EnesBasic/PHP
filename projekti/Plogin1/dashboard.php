@@ -18,7 +18,11 @@ $_SESSION["password"];
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>WELCOME</h1>    
+    <h1>WELCOME</h1>  
+    <a href="dashboard.php">Dashboard</a>
+    <a href="dashboard1.php">Dashboard1</a>
+    <a href="dashboard2.php">Dashboard2</a>
+    <a href="logout.php">Logout</a>
 </body>
 </html>
 

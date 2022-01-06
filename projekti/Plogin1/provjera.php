@@ -8,7 +8,7 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Register</title>
+    <title>Provjera</title>
 </head>
 <body>
     <form action="login.php" method="POST">
@@ -24,7 +24,7 @@
     <?php
     
     if(isset($_GET["error"])){
-        echo "<div class='error'>".$_GET["error"]."</span>";
+        echo "<div class='error'>" .$_GET["error"]. "</span>";
     }
 ?>
     <a href="register.php">Registruj se!</a>
