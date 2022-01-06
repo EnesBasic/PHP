@@ -8,7 +8,7 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Registracija</title>
+    <title>Login</title>
 </head>
 <body>
 <h1>LOGIN</h1>

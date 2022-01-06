@@ -20,5 +20,4 @@
      header("Location: ../login.php");
 
  }
-
 ?>
