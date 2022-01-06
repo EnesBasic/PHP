@@ -1,12 +1,11 @@
 <?php
-
 ini_set('error_reporting', E_ALL);
 ini_set( 'display_errors', 1 );
 
-if(isset($_POST["uname"]) && isset($_POST["pass"])){
-    if(!empty($_POST["uname"]) && !empty($_POST["pass"])){
-        $uname = $_POST["uname"];
-        $pass = $_POST["pass"];
+if(isset($_POST["name"]) && isset($_POST["pas"])){
+    if(!empty($_POST["name"]) && !empty($_POST["pas"])){
+        $uname = $_POST["name"];
+        $pass = $_POST["pas"];
     }
 
     if(file_exists("novi.json")){
@@ -16,8 +15,8 @@ if(isset($_POST["uname"]) && isset($_POST["pass"])){
         $kori = array();
     }
 
-    $kori = array("uname" => $uname, "pass" => $pass);
+    $kori = array("name" => $uname, "pas" => $pass);
     file_put_contents("novi.json", json_encode("novi.json"));
-    header("Location:../log.php");
+    header("Location: ../log.php");
 }
 ?>
