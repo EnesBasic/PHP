@@ -24,7 +24,7 @@
     <?php
     
     if(isset($_GET['error'])){
-        echo "<div> ".$_GET['error']."</span>";
+        echo "<div class='error'>".$_GET["error"]."</span>";
     }
     
     ?>
