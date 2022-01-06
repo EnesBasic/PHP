@@ -11,12 +11,12 @@
     <title>Registracija</title>
 </head>
 <body>
-    <form action="reg.inc.php" method="POST">
+    <form action="includes/reg-inc.php" method="POST">
         <label>Username: </label>
-        <input type="text" name="uname">
+        <input type="text" name="r">
         <br>
         <label>Password: </label>
-        <input type="password" name="pass">
+        <input type="password" name="t">
         <br>
         <input type="submit" name="submit" value="Registruj se">
     </form>
