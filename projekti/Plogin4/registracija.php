@@ -13,10 +13,10 @@
 <body>
     <form action="includes/reg.inc.php" method="POST">
         <label>Username: </label>
-        <input type="text" name="name">
+        <input type="text" name="uname">
         <br>
         <label>Password: </label>
-        <input type="password" name="pas">
+        <input type="password" name="pass">
         <br>
         <input type="submit" name="submit" value="Registruj se">
     </form>
