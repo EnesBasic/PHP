@@ -12,11 +12,11 @@
 </head>
 <body>
     <form action="reg.inc.php" method="POST">
-            <label for="username">Username :</label>
-            <input type="text" name="username">
+            <label for="username">username :</label>
+            <input type="text" name="uname">
             <br>
-            <label for="password">Password :</label>
-            <input type="password" name="password">
+            <label for="password">password :</label>
+            <input type="password" name="pass">
             <br>
             <input type="submit" name="submit" value="registruj se">
     </form>
@@ -24,7 +24,6 @@
 </html>
 
 <!--
-?php
- ini_set('error_reporting', E_ALL);//prikazivanje gresaka xampa na linuxu
- ini_set( 'display_errors', 1 );//prikazivanje gresaka xampa na linuxu
-?>
+
+ ini_set('error_reporting', E_ALL);
+ ini_set( 'display_errors', 1 );
