@@ -27,7 +27,7 @@
         echo "<div class='error'>" .$_GET["error"]. "</span>";
     }
 ?>
-    <a href="register.php">Registruj se!</a>
+    <a href="registracija.php">Registruj se!</a>
     
 
   </body>
