@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="descritpion" content="..."
+    <meta name="author" content="@Enes Basic">
+    <meta name="robots" content="nofollow">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Register</title>
 </head>
 <body>
     <form action="" method="POST">
@@ -18,6 +22,10 @@
     </form>
 
 <?php
+
+    ini_set('error_reporting', E_ALL);
+    ini_set( 'display_errors', 1 );
+
     if (isset($_POST["username"]) && isset($_POST["password"])){
         if(!empty($_POST["username"]) && !empty($_POST["password"])){
             $username = $_POST["username"];
