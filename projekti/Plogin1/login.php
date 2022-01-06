@@ -11,18 +11,7 @@
     <title>Login</title>
 </head>
 <body>
-    <h1>WELCOME</h1>
-  </body>
-</html>
-
-<!--
-?php
- ini_set('error_reporting', E_ALL);//prikazivanje gresaka xampa na linuxu
- ini_set( 'display_errors', 1 );//prikazivanje gresaka xampa na linuxu
-?>
-
-
-    <form action="" method="POST">
+    <form action="includes/log-inc.php" method="POST">
         <label for="username">Username</label>
         <input type="text" name="username">
         <br>
@@ -32,5 +21,5 @@
         <input type="submit" name="submit" value="Loguj se">
         <br>
     </form>
-
--->
+  </body>
+</html>
