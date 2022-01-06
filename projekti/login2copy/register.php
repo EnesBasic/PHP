@@ -18,7 +18,7 @@
         <label for="password">Unesi password</label>
         <input type="text" name="password" required>
     <br><br>
-        <input type="submit" value="Registuj se">
+        <input type="submit" value="Registruj se">
     </form>
 
 <?php
@@ -43,7 +43,7 @@
             header("Location: provjera.php");
 
         }else{
-              echo "<span> Prazno!</span>";
+            echo "<span> Prazno!</span>";
         }
     }else{
           echo "<span> Nije poslano!!</span>";
