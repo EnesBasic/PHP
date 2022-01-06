@@ -9,7 +9,7 @@ function session_checker($kljuc){
     }
 }
 session_checker("username");
-session_checker("logged");
+//session_checker("logged");
 
 ?>
 

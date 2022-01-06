@@ -11,7 +11,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="includes/log-inc.php" method="POST">
+    <form action="dashboard.php" method="POST">
         <label for="username">Username</label>
         <input type="text" name="username">
         <br>

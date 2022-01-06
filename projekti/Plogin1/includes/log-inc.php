@@ -9,18 +9,20 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-        file_get_contents("baza.json");
+        $useri = file_get_contents("baza.json");
         $useri = json_decode($useri, true);
-    }
 
-    foreach($useri as $user){
-        if($username($_POST["username"]=== $user) && $password($_POST["password"]=== $user)){
-            session_start();
-            $_SESSION["username"] = $user["username"];
-            $_SESSION["password"] = $user["password"];
-            header("Location: login.php");
+        foreach($useri as $user){
+            if($username === $user["username"] && $password === $user["password"]){
+                session_start();
+                $_SESSION["username"] = $user["username"];
+                $_SESSION["password"] = $user["password"];
+                header("Location: ../dashboard.php");
+                return;
+            }
         }
-    }
+    }else{header("Location: login.php?error=pogresno!");}
+}else{header("Location: login.php?error=prazno!");}
 
-}
+
 ?>
