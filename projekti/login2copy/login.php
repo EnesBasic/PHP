@@ -19,6 +19,6 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
             }
         }
         //if($user_logged == 0){header("Location: index.php?error = pogresno!");}
-    }else{header("Location: index.php?error = prazno!");}
-}else{header("Location: index.php?error = nisu poslani!");}
+    }else{header("Location: provjera.php?error = prazno!");}
+}else{header("Location: provjera.php?error = nisu poslani!");}
 ?>

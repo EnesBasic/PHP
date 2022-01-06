@@ -17,7 +17,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
                 return;
             }
         }
-    }else{header("Location: index.php?error=pogresno!");}
-}else{header("Location: index.php?error=prazno!");}
+    }else{header("Location: provjera.php?error=pogresno!");}
+}else{header("Location: provjera.php?error=prazno!");}
 
 ?>
