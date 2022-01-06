@@ -11,7 +11,7 @@
     <title>Register</title>
 </head>
 <body>
-    <form action="includes/reg-inc.php" method="POST">
+    <form action="reg-inc.php" method="POST">
         <label for="username">Username</label>
         <input type="text" name="username">
         <br>
@@ -23,7 +23,7 @@
     </form>
     <?php
     
-    if(isset($_GET['error'])){
+    if(isset($_GET["error"])){
         echo "<div class='error'>".$_GET["error"]."</span>";
     }
     
