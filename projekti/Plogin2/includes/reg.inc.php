@@ -6,16 +6,17 @@
      if(!empty($_POST["uname"]) && !empty($_POST["pass"])){
          $username = $_POST["uname"];
          $password = $_POST["pass"];
-     }else{
-        $useri = array("uname" => $username, "pass" => $password);
      }
 
      if(file_exists("baza.json")){
-        $useri = file_put_contents(json_decode("baza.json"));
+        $useri = file_get_contents("baza.json");
         $useri = json_decode($useri, true);
-     } 
+     }else{
+         $useri = array();
+     }
 
+     $useri = array("uname" => $username, "pass" => $password);
+     file_put_contents("baza.json",json_encode("baza.json"));
+     header("Location: ../login.php");
  }
-
-
 ?>

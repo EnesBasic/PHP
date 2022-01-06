@@ -8,18 +8,10 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Registracija</title>
+    <title>Login</title>
 </head>
 <body>
-    <form action="includes/reg.inc.php" method="POST">
-            <label for="username">username :</label>
-            <input type="text" name="uname">
-            <br>
-            <label for="password">password :</label>
-            <input type="password" name="pass">
-            <br>
-            <input type="submit" name="submit" value="registruj se">
-    </form>
+ <h1>WELCOME</h1>
   </body>
 </html>
 
