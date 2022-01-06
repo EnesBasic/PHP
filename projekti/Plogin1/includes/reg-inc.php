@@ -12,7 +12,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
                         $useri = json_decode($useri, true);
                 }else{$useri = array();}
 
-        $useri = array("username" => $username, "password" => $password);
+        $useri[] = array("username" => $username, "password" => $password);
         file_put_contents("baza.json", json_encode("baza.json"));
         header("Location: ../login.php");
         }else{echo "<span> ERROR Prazno!!!</span>";}}

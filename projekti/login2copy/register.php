@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="" method="POST">
-    <label for="username">Unesi uername</label>
+    <label for="username">Unesi username</label>
     <input type="text" name="username" required>
     <br><br>
     <label for="password">Unesi password</label>
@@ -32,7 +32,7 @@
 
             $korisnici[] = array("username" => $username, "password" => $password);
             file_put_contents("korisnici.json", json_encode($korisnici));
-            header("Location: index.php");
+            header("Location: ispit-errora-samo.php");
 
             
         }else{
