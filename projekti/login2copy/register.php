@@ -17,7 +17,7 @@
     <input type="submit" value="Registuj se">
     </form>
 
-    <?php
+<?php
     if (isset($_POST["username"]) && isset($_POST["password"])){
         if(!empty($_POST["username"]) && !empty($_POST["password"])){
             $username = $_POST["username"];
@@ -32,9 +32,8 @@
 
             $korisnici[] = array("username" => $username, "password" => $password);
             file_put_contents("korisnici.json", json_encode($korisnici));
-            header("Location: ispit-errora-samo.php");
+            header("Location: provjera.php");
 
-            
         }else{
               echo "<span> Prazno!</span>";
         }
@@ -42,7 +41,7 @@
           echo "<span> Nije poslano!!</span>";
     }
 
-    ?>
+?>
 
 </body>
 </html>
