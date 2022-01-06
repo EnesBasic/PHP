@@ -9,8 +9,8 @@
      }
 
      if(file_exists("bazna.json")){
-         $korisnici = file_get_contents(json_decode("bazna.json"));
-         $korisnici = json_decode("bazna.json");
+         $korisnici = file_get_contents("bazna.json");
+         $korisnici = json_decode($korisnici, true);
      }else{
          $korisnici = array();
      }
