@@ -1,7 +1,13 @@
 <?php
 session_start();
-$_SESSION["username"];
-$_SESSION["password"];
+
+function session_checker($kljuc){
+    if(isset($_SESSION[$kljuc])){
+        echo "vrijednost 1" .$_SESSION[$kljuc];
+        echo "<br>";
+    }
+}
+session_checker("username");
 
 ?>
 
@@ -20,8 +26,6 @@ $_SESSION["password"];
 <body>
     <h1>WELCOME</h1>  
     <a href="dashboard.php">Dashboard</a>
-    <a href="dashboard1.php">Dashboard1</a>
-    <a href="dashboard2.php">Dashboard2</a>
     <a href="logout.php">Logout</a>
 </body>
 </html>
