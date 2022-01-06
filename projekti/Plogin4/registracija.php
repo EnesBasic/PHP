@@ -11,7 +11,7 @@
     <title>Registracija</title>
 </head>
 <body>
-    <form action="includes/reg.inc.php" method="POST">
+    <form action="reg.inc.php" method="POST">
         <label>Username: </label>
         <input type="text" name="uname">
         <br>
