@@ -13,7 +13,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
                 session_start();
                 $_SESSION["username"] = $user["username"];
                 $_SESSION["password"] = $user["password"];
-                header("Location: ../dashboard.php");
+                header("Location: dashboard.php");
                 return;
             }
         }
