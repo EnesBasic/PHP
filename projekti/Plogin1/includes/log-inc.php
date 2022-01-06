@@ -1,9 +1,5 @@
 <?php
 
-if(isset($_GET['error'])){
-    echo "<div> ".$_GET['error']."</span>";
-}
-
 if(isset($_POST["username"]) && isset($_POST["password"])){
     if(!empty($_POST["username"]) && !empty($_POST["password"])){
         $username = $_POST["username"];
@@ -21,8 +17,8 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
                 return;
             }
         }
-    }else{header("Location: login.php?error=pogresno!");}
-}else{header("Location: login.php?error=prazno!");}
+    }else{header("Location: index.php?error=pogresno!");}
+}else{header("Location: index.php?error=prazno!");}
 
 
 ?>

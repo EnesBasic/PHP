@@ -13,8 +13,8 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
                 }else{$useri = array();}
 
         $useri[] = array("username" => $username, "password" => $password);
-        file_put_contents("baza.json", json_encode("baza.json"));
-        header("Location: ../login.php");
+        file_put_contents("baza.json", json_encode($useri));
+        header("Location: ../index.php");
         }else{echo "<span> ERROR Prazno!!!</span>";}}
 
 else{echo "<span> ERROR, Nije poslano***</span>";}
