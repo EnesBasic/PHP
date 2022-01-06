@@ -11,7 +11,7 @@
     <title>Register</title>
 </head>
 <body>
-    <form action="reg-inc.php" method="POST">
+    <form action="login.php" method="POST">
         <label for="username">Username</label>
         <input type="text" name="username">
         <br>
