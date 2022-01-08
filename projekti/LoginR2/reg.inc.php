@@ -14,7 +14,7 @@ if(isset($_POST["uname"]) && isset($_POST["pass"])){
     }else{
         $newuser = array();}
 
-        $newuser[]=array("uname" => $uname, "pass" => $pass);
+        $newuser[] = array("uname" => $uname, "pass" => $pass);
         file_put_contents("baza.json", json_encode($newuser));
         header("Location: provjera.php");
 
