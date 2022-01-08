@@ -11,12 +11,11 @@
             $newuser = file_get_contents("baza.json");
             $newuser = json_decode($newuser, true);
 
-            foreach($newuser as $user){
-                if($uname === $user["uname"] && $pass === $user["pass"]){
-
+            foreach($newuser as $usr){
+                if($uname === $usr["uname"] && $pass === $usr["pass"]){
                     session_start();
-                    $_SESSION["uname"] = $user["uname"];
-                    $_SESSION["pass"] = $user["pass"];
+                    $_SESSION["uname"] = $usr["uname"];
+                    $_SESSION["pass"] = $usr["pass"];
                     header("Location: dashboard.php");
                     return;
                 }
