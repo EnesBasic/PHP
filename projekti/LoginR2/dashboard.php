@@ -8,17 +8,9 @@
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Register</title>
+    <title>Dashboard</title>
 </head>
 <body>
-    <form action="reg.inc.php" method="post"></form>    
-    <label>Username :</label>
-    <input type="text" name="uname">
-    <br><br>
-    <label>Password</label>
-    <input type="text" name="pass">
-    <br></br>
-    <input type="submit" name="register" value="Register">
-    <br>
+<h1>WELCOME</h1>
 </body>
 </html>
