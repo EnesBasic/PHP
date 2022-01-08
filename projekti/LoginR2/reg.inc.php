@@ -9,21 +9,21 @@ if(isset($_POST["uname"]) && isset($_POST["pass"])){
         $pass = $_POST["pass"];
 
     if(file_exists("baza.json")){
-        $newuser = file_put_contents("baza.json");
-        $newuser = json_encode($newuser, true);
+        $newuser = file_get_contents("baza.json");
+        $newuser = json_decode($newuser, true);
     }else{
         $newuser = array();}
 
         $newuser[]=array("uname" => $uname, "pass" => $pass);
-        $newuser = file_get_contents("baza.json", json_encode($newuser));
+        file_put_contents("baza.json", json_encode($newuser));
         header("Location: provjera.php");
 
     }else{
-        echo "<span> Nije poslano! </span>";
+        echo "<span> Prazno! </span>";
     }
 
 }else{
-    echo "<span> Prazno! </span>";
+    echo "<span> Nije Poslano! </span>";
 }
 
 ?>

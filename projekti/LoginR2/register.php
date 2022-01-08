@@ -11,7 +11,7 @@
     <title>Register</title>
 </head>
 <body>
-    <form action="reg.inc.php" method="post"></form>    
+    <form action="" method="post"></form>    
     <label>Username :</label>
     <input type="text" name="uname">
     <br><br>
