@@ -12,7 +12,7 @@
             $newuser = json_decode($newuser, true);
 
             foreach($newuser as $user){
-                if($uname["uname"] === $user["uname"] && $pass["pass"] === $user["pass"]){
+                if($uname === $user["uname"] && $pass === $user["pass"]){
 
                     session_start();
                     $_SESSION["uname"] = $user["uname"];
@@ -23,7 +23,7 @@
             }
         }else{header("Locaton: provjera.php?error=prazno");}
     }
-else{header("Locaton: provjera.php?error=nije poslano");}
+else{header("Locaton: provjera.php?error=pogresno");}
 
 ?>
 </body>

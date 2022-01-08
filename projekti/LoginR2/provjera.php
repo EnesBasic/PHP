@@ -13,13 +13,13 @@
 <body>
 
     <form action="login.php" method="post"> 
-        <label>Username :</label>
+        <label>Username</label>
         <input type="text" name="uname">
         <br><br>
         <label>Password</label>
         <input type="text" name="pass">
         <br></br>
-        <input type="submit" name="register" value="Register">
+        <input type="submit" name="register" value="Login">
         <br>
     </form>
     <?php

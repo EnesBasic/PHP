@@ -11,14 +11,15 @@
     <title>Register</title>
 </head>
 <body>
-    <form action="" method="post"></form>    
-    <label>Username :</label>
-    <input type="text" name="uname">
-    <br><br>
-    <label>Password</label>
-    <input type="text" name="pass">
-    <br></br>
-    <input type="submit" name="register" value="Register">
-    <br>
+    <form action="reg.inc.php" method="post"> 
+        <label>Username :</label>
+        <input type="text" name="uname">
+        <br><br>
+        <label>Password :</label>
+        <input type="text" name="pass">
+        <br></br>
+        <input type="submit" name="register" value="Register">
+        <br>
+    </form>   
 </body>
 </html>
