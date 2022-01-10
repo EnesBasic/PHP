@@ -73,7 +73,6 @@ session_start();
             }
         }
         echo "<a href='index.php?user=" . $_SESSION["username"] . "'>Pogledaj svoj profil</span>";
-        
-    ?>
+?>
 </body>
 </html>
