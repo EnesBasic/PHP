@@ -24,12 +24,17 @@ class Calculator{
         echo $this->number1 * $this->number2;
     }
 
-    public function div(){
+    public function div()
+    {
+        ?>
+        <h1>Total div :</h1>
+        <?php
         echo $this->number1 / $this->number2;
     }
 }
 
 $calc = new Calculator(4,5);
+
 $calc->add();
 echo "<br>";
 $calc->sub();
