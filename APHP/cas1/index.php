@@ -7,14 +7,14 @@ function add($num1, $num2){
     return $num1 + $num2;
 }
 
-class Claculator{
+class Calculator{
     public function add($num1,$num2){
         return $num1 + $num2;
     }
 }
 
-//echo add(1,2);
-//echo add(2,3);
+echo add(1,2);
+echo add(2,3);
 
 echo "<br>";
 
