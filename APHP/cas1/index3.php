@@ -51,15 +51,18 @@ class Calculator{
 }
 
 $calc = new Calculator(4,5);
-echo $calc;
-
+$calc->total = "Total :";
 $calc->add();
-echo "<hr>";
+echo "<br>";
 $calc->sub();
-echo "<hr>";
+echo "<br>";
 $calc->multiply();
-echo "<hr>";
+echo "<br>";
 $calc->div();
+echo "<br>";
+
 echo "<hr>";
+
+echo $calc;
 
 ?>
