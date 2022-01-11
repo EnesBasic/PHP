@@ -33,45 +33,33 @@ class Calculator{
     public function div()
     {
         ?>
-        <h1>Total div :</h1>
+        <h4>Total div :</h4>
         <?php
         echo $this->number1 / $this->number2;
     }
    
     public function __toString(){
-        echo "Pozdrav iz kalkulatora";
+        //echo "Pozdrav iz kalkulatora";
+        return (string)$this->add();
     }
 
     public function __destruct(){
-        //return "Object is destroyed";
-        return (string)$this->add();
+        return "Object is destroyed";
+
     }
 
 }
 
 $calc = new Calculator(4,5);
+echo $calc;
 
 $calc->add();
-echo "<br>";
-$calc->sub();
-echo "<br>";
-$calc->multiply();
-echo "<br>";
-$calc->div();
-echo "<br>";
-
 echo "<hr>";
-
-$calc2 = new Calculator(6,7);
-$calc2->add();
-echo "<br>";
-$calc2->sub();
-echo "<br>";
-$calc2->multiply();
-echo "<br>";
-$calc2->div();
-echo "<br>";
-
-echo $calc;
+$calc->sub();
+echo "<hr>";
+$calc->multiply();
+echo "<hr>";
+$calc->div();
+echo "<hr>";
 
 ?>
