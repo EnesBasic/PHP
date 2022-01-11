@@ -22,6 +22,7 @@ class File{
         return $result;
     }
 
+
     public function set($content, $encode = true, $decode = true){
         if(file_exists($this->file)){
             $result = file_get_contents($this->file);
@@ -32,21 +33,22 @@ class File{
                 $result = array();
             }
 
-            if(isset($content["username"]) && isset($content["password"])){
-                if(!empty($content["username"]) && !empty($content["password"]))
+            if(isset($content["username"]) && isset($content["password"])){                if(!empty($content["username"]) && !empty($content["password"]))
                 $username = $content["username"];
                 $username = $content["password"];
 
                 $result[]=array("username" => $username, "password" => $password);
+                
                 if($encode){
                     $result = json_encode($result);
                 }
+
                 if(file_put_contents($this->file)){
-                    //pokreni sesiju
-                    //otidi na zeljenu stranicu
+                    return true;
                 }
             }
-        }
+        return false;
+    }
 }
 
 ?>
