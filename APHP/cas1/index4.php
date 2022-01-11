@@ -45,13 +45,12 @@ class Calculator{
 
     public function __destruct(){
         return "Object is destroyed";
-        //return (string)$this->add();
     }
 
 }
 
 $calc = new Calculator(4,5);
-
+$calc->total = "Total :";
 $calc->add();
 echo "<br>";
 $calc->sub();
@@ -63,16 +62,7 @@ echo "<br>";
 
 echo "<hr>";
 
-$calc2 = new Calculator(6,7);
-$calc2->add();
-echo "<br>";
-$calc2->sub();
-echo "<br>";
-$calc2->multiply();
-echo "<br>";
-$calc2->div();
-echo "<br>";
-
 echo $calc;
+
 
 ?>
