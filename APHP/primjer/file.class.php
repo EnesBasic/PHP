@@ -36,6 +36,15 @@ class File{
                 if(!empty($content["username"]) && !empty($content["password"]))
                 $username = $content["username"];
                 $username = $content["password"];
+
+                $result[]=array("username" => $username, "password" => $password);
+                if($encode){
+                    $result = json_encode($result);
+                }
+                if(file_put_contents($this->file)){
+                    //pokreni sesiju
+                    //otidi na zeljenu stranicu
+                }
             }
         }
 }
