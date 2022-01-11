@@ -72,7 +72,7 @@ session_start();
                 echo "<span style='color: red'>ERROR in saving data!!!</span>";
             }
         }
-        echo "<a href='index.php?user=" . $_SESSION["username"] . "'>Pogledaj svoj profil</span>";
+        echo "<a href='index.php?user=". $_SESSION["username"] . "'>Pogledaj svoj profil</span>";
 ?>
 </body>
 </html>
