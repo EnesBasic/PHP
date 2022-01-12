@@ -11,6 +11,10 @@ class Calculator{
         //$this->result
         //self::$result
     }
+
+    public function result(){
+        return self::$result;
+    }
 }
 
 // Ovo je instancna metoda
@@ -25,5 +29,21 @@ echo Calculator::add(2,3);
 echo "<hr>";
 
 echo Calculator::add(3,4);
+
+echo "<hr>";
+
+$calc1 = new Calculator();
+echo $calc1->result();
+echo "<br>";
+
+Calculator::add(5,5);
+$calc2 = new Calculator();
+echo $calc2->result();
+echo "<br>";
+
+echo $calc1->result();
+echo "<br>";
+
+
 
 ?>
