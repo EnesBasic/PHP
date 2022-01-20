@@ -1,0 +1,95 @@
+*{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+header ul{
+    margin: 0;
+    padding: 0;
+    text-align:right ;
+}
+
+ul li{
+    display: inline-block;
+}
+
+header ul li a{
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: right;
+}
+
+.wrapper{
+    padding: 20px;
+}
+
+h1,h2,h3,h4{
+    text-align: center;
+}
+
+h1,h2,h3{
+    font-size: 30px;
+}
+
+#home p{
+    text-align: center;
+    font-size: 20px;
+}
+
+#home, #about, #projects{
+    border-bottom: 1px solid #666;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+#about{
+    border-bottom: #666;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+#projects{
+    border-bottom: 1px solid #666;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+#about .container .left{
+    display: inline-block;
+    width: 50%;
+}
+
+.container .right{
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+}
+
+#about .container .right p{
+    font-size: 20px ;
+}
+
+#projects .container-left .left, #projects .container-right .right{
+    display: inline-block;
+    width: 50%;
+}
+
+#projects .container-left .right,#projects .container-right .left{
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+}
+
+#projects .container-right .left{
+    width: 48%;
+}
