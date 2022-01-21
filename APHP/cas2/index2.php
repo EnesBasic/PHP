@@ -32,6 +32,6 @@ $user1 = new User();
 echo $user1->sayHello();
 
 $user2 = new User();
-echo 
+
 
 ?>
