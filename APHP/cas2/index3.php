@@ -22,7 +22,7 @@ class User{
                 return "Hello User from ".self::APP;
                 break;
             case "de":
-                return "Halo User von ".self::APP;
+                return "Grüße an den Benutzer von ".self::APP;
                 break;
             case "bs":
                 return "Pozdrav Korisniku iz ".self::APP;
@@ -34,7 +34,7 @@ class User{
     }
 }
 
-User::setLanguage("bs");
+User::setLanguage("de");
 
 $user1 = new User();
 echo $user1->sayHello();
