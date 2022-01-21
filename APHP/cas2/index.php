@@ -18,7 +18,7 @@ class Calculator{
 }
 
 // Ovo je instancna metoda
-$calc  = new Calculator();
+//$calc  = new Calculator();
 echo $calc->add(2,3);
 
 echo "<hr>";
@@ -32,12 +32,12 @@ echo Calculator::add(3,4);
 
 echo "<hr>";
 
-$calc1 = new Calculator();
+$calc1 = new Calculator(4,5);
 echo $calc1->result();
 echo "<br>";
 
 Calculator::add(5,5);
-$calc2 = new Calculator();
+$calc2 = new Calculator(9,4);
 echo $calc2->result();
 echo "<br>";
 

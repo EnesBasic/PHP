@@ -1,0 +1,46 @@
+@charset "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.box{
+	width: 100px;
+	height: 100px;
+	background: green;
+	position: absolute;
+	transition: 250ms all ease-in-out;
+}
+
+@media screen and (min-width: 1200px ){
+	.box{
+		background: blue;
+		top: 0;
+		right: 0;
+	}
+}
+
+@media screen and (min-width: 1000px ) and (max-width: 1199px){
+	.box{
+		background:red;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+@media screen and (min-width: 700px ) and (max-width: 999px){
+	.box{
+		background: yellow;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
