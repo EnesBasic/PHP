@@ -1,45 +1,48 @@
 <?php
 
-class TemplateUser{
-    public $name;
-    public $lastname;
-    public $email;
-    public $password;
+// STATICNO svojstvo
 
-    public function __construct($name, $lastname, $email, $password){
-        $this -> name = $name;
-        $this -> lastname = $lastname;
-        $this -> email - $email;
-        $this -> password = $password;
+ini_set('error_reporting', E_ALL);
+ini_set( 'display_errors', 1 );
+
+
+class User{
+
+    const APP = "IT Academy";
+
+    public static $language;
+
+    public static function setLanguage($lang){
+        self::$language = $lang;
     }
 
-    public function get_Info(){
-        echo "My name is: " .$this->name." ".$this->lastname;
-        echo "<br>";
-        echo "My email is: " .$this->email; 
-        } 
-}
-
-
-class User extends TemplateUser{
-    public $status = "2";
-    public function __construct($name, $lastname, $email, $password){
-        parent:: __construct($name, $lastname, $email, $password);
+    public function sayHello(){
+        switch(self::$language){
+            case "en":
+                return "Hello User from";// .$self::APP;
+                break;
+            case "de":
+                return "Halo User von";// .$self::APP;
+                break;
+            case "bs":
+                return "Pozdrav Korisniku iz";//.$self::APP;
+                break;
+            default:
+                return "Hello user from";//.$self::APP;
+                break;
+        }
     }
 }
 
-class Admin extends TemplateUser{
-    public $status = "3";
-    public function __construct($name, $lastname, $email, $password){
-        parent:: __construct($name, $lastname, $email, $password);
-    }
-}
+User::setLanguage("bs");
 
+$user1 = new User();
+echo $user1->sayHello();
 
-$user = new User("Bruce", "Wayne", "bruce@wayne.com", "1234");
-$user->get_Info();
-echo "<br><br>";
+echo "<br>";
 
+$user2 = new User();
+echo $user2->sayHello();
 
 
 ?>
