@@ -21,22 +21,22 @@ class TemplateUser{
 }
 
 
-
 class User extends TemplateUser{
     public $status = "2";
-    public function __construct($name, $lastname, $email, $password){
-        parent::__construct($name, $lastname, $email, $password);
-    }
 }
 
 class Admin extends TemplateUser{
     public $status = "3";
+    public function __construct($name, $lastname, $email, $password){
+        parent:: __construct($name, $lastname, $email, $password);
+    }
 }
 
 
 $user = new User("Bruce", "Wayne", "bruce@wayne.com", "1234");
 $user->get_Info();
 echo "<br><br>";
+
 
 
 ?>
