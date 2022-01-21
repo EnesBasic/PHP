@@ -1,6 +1,7 @@
 <?php
 
-// NASLJEDIVANJE
+// ENKAPSULACIJA znaci grupisanje koda pa ga iskoristvamo vise puta
+// NASLJEDIVANJE treba da ne ponavljamo kod
 
 ini_set('error_reporting', E_ALL);
 ini_set( 'display_errors', 1 );
