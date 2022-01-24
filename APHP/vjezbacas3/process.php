@@ -25,9 +25,9 @@ if(isset($_POST["username"]) && isset($_POST["password"])&& isset($_POST["email"
         VALUES '{$username}', '{$password}', '{$email}'";
 
         if($connection->query($sql) === TRUE){
-            header("Location: index.php?message=User regidtered successfully!");
+            header("Location: index.php?message=User registered successfully!");
         }else{
-            header("Location: index.php?message=Error while regidtering user!");
+            header("Location: index.php?message=Error while registering user!");
         }
 
 
