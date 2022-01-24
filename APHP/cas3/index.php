@@ -20,7 +20,7 @@ if($result->num_rows > 0 ){
         echo "id: " .$row["id"]. 
         ", username: " .$row["username"].
         ", password: " .$row["password"].
-        ", email: " .$row["email"];
+        ", email: " .$row["email"]. "<br>";
     }
 }
 
