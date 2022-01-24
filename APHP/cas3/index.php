@@ -25,7 +25,29 @@ if($result->num_rows > 0 ){
 }
 
 // Upis podataka
+$sql = "INSERT INTO user(username, password, email)VALUES('enesbasic','1234','enes@basic.com')";
+if($connection->query($sql)=== TRUE){
+    echo "User inserted successfully!";
+}else{
+    echo "ERROR" .$connection->error;
+}
 
 
+// Update podataka
+$sql = "UPDATE user SET username='imac' WHERE id=3";
+//Provjera da lije sql upit uspio
+if($connection->query($sql)===TRUE){
+    echo "User edited successfully!";
+}else{
+    echo "ERROR!".$connection->error;
+}
+
+// Brisanje korisnika
+$sql = "DELETE FROM user WHERE id=2";
+if($connection->query($sql)===TRUE){
+    echo "User deleted successfully!";
+}else{
+    echo "ERROR!".$connection->error;
+}
 
 ?>
