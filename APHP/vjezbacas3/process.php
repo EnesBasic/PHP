@@ -9,8 +9,31 @@ if(isset($_POST["username"]) && isset($_POST["password"])&& isset($_POST["email"
         $password = $_POST["password"];
         $email = $_POST["email"];
 
-        
+        if (strlen($username) > 100 || strlen($password) > 256 || strlen($email) > 50){
+            header("Location: index.php?message=Jedno od polja je predugacko...");
+        }
+        $username = trim($username);
+        $password = trim($password);
+        $email = trim($email);
+
+        $connection  = new mysqli("localhost", "root", "", "user");
+        if($connection->connect_error){
+            header("Location: index.php?message=".$connection->connect_error);
+        }
+
+        $sql = "INSERT INTO user (username, password, email)
+        VALUES '{$username}', '{$password}', '{$email}'";
+
+        if($connection->query($sql) === TRUE){
+            header("Location: index.php?message=User regidtered successfully!");
+        }else{
+            header("Location: index.php?message=Error while regidtering user!");
+        }
+
+
+
     }
+
 }
 
 ?>
