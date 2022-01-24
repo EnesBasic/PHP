@@ -14,7 +14,7 @@
 <body>
     <div class="form_pos";>
     <h1 class="title">Login Form</h1>
-        <form class="forma_deg" action="login.php" method="POST">
+        <form class="forma_deg" action="process-login.php" method="POST">
             <div>
                 <label class="label">E-mail</label>
                 <input class="input" type="email" name="email" required maxlength="50">
