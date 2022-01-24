@@ -22,12 +22,12 @@ if(isset($_POST["username"]) && isset($_POST["password"])&& isset($_POST["email"
         }
 
         $sql = "INSERT INTO user (username, password, email)
-        VALUES '{$username}', '{$password}', '{$email}'";
+        VALUES ('{$username}', '{$password}', '{$email}')";
 
         if($connection->query($sql) === TRUE){
             header("Location: index.php?message=User registered successfully!");
         }else{
-            header("Location: index.php?message=Error while registering user!");
+            header("Location: index.php?message=Error while registering user!".$connection->error);
         }
 
 
