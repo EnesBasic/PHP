@@ -8,7 +8,7 @@
     <meta name="descritpion" content="..."
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
-    <title>Login page</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
