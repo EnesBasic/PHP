@@ -5,12 +5,12 @@ ini_set( 'display_errors', 1 );
 
 
 if(isset($_POST["username"]) && isset($_POST["password"])&& isset($_POST["email"])){
-    if(!empty($_POST["username"])&& !empty($_POST["password"])&& !empty($_POST["email"])){
+    if(!empty($_POST["username"])&& !empty($_POST["password"]) && !empty($_POST["email"])){
         $email = $_POST["email"];
         $password = $_POST["password"];
 
         if(strlen($email)>50 || strlen($password)>256){
-            header("Location: login.php?message=Jedni polje je predugacko!");
+            header("Location: login.php?message=Jedno polje je predugacko!");
 
         }
 
@@ -27,8 +27,8 @@ if(isset($_POST["username"]) && isset($_POST["password"])&& isset($_POST["email"
         $result = $connection->query($sql);
 
         if($result->num_rows > 0){
-            while ($row = $result->fetch_accoc()){
-                if($row["email"]===$email && $row["password"]=== $password){
+            while ($row = $result->fetch_assoc()){
+                if($row["email"] === $email && $row["password"] === $password){
                     session_start();
                     $_SESSION["user_id"] = $row["id"];
                     $_SESSION["logged"] = date("d-m-Y H:i:s");
