@@ -28,10 +28,47 @@ if(isset($_POST['register']))
 function insertDetails($con, $username, $email, $password)
 {
     $query =  $con->prepare("INSERT INTO users (username, email, password) VALUES(:username, :email, :password)");
+    
     $query->bindParam(":username", $username);
     $query->bindParam(":email", $email);
     $query->bindParam(":password", $password);
 
     return $query->execute();
+}
+
+
+
+if(isset($_POST['login']))
+{
+    $con = config::connect();
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if(checkLogin($con, $username, $password))
+    {
+        $_SESSION['username']=$username;
+        header("Location: profile.php");
+    }else{
+        echo "The username and password are incorrect!!!";
+    }
+}
+
+function checkLogin($con, $username, $password)
+{
+    $query =  $con->prepare("SELECT * FROM users WHERE username=:username AND password=:password");
+
+    $query->bindParam(":username", $username);
+    $query->bindParam(":password", $password);
+    $query->execute();
+
+    if($query->rowCount() == 1)
+    {
+        return TRUE;
+    }
+    else 
+    {
+        return FALSE;
+    }
+
 }
 ?>
