@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 ini_set ('display_errors', 'on');
 ini_set ('log_errors', 'on');
 ini_set ('display_startup_errors', 'on');
@@ -16,7 +18,9 @@ if(isset($_POST['register']))
 
     if(insertDetails($con, $username, $email, $password));
     {
-     echo ("Details inserted successfully");   
+     //echo ("Details inserted successfully");
+        $_SESSION['username']=$username;
+        header("Location: profile.php");
     }
 }
 
