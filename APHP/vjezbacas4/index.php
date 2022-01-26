@@ -101,8 +101,11 @@ require "connection.php";
                 echo "<td>" .$value["datetime"]. "</td>";
 
                 if($value["status"]=="1"){
-                    echo
+                    echo "<td> Aktivan </td>";
+                }else{
+                    
                 }
+
             }
             
             ?>
