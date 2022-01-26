@@ -10,11 +10,11 @@
 </head>
 <body>
     <form action="register.php" method="post">
-        <input type="number" name="rollno" placeholder="Roll No"><br><br>
-        <input type="text" name="fname" placeholder="name..."><br><br>
-        <input type="text" name="lname" placeholder="lastname..."><br><br>
-        <input type="text" name="adres" placeholder="address..."><br><br>
-        <input type="text" name="email" placeholder="example@example.com"><br><br>
+        <input type="number" name="rollno" placeholder="Roll No" value="<?php echo ($rollno);?>"> <br><br>
+        <input type="text" name="fname" placeholder="name..." value="<?php echo ($fname);?>"> <br><br>
+        <input type="text" name="lname" placeholder="lastname..." value="<?php echo ($lname);?>"><br><br>
+        <input type="text" name="adres" placeholder="address..." value="<?php echo ($adres);?>"><br><br>
+        <input type="text" name="email" placeholder="example@example.com" value="<?php echo ($email);?>"><br><br>
         <div>
             <input type="submit" name="insert" value="Add">
             <input type="submit" name="delete" value="Delete">
