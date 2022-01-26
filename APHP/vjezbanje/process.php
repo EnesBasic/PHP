@@ -11,10 +11,16 @@ include_once("config.php");
 
 if(isset($_POST['register']))
 {
+
     $con = config::connect();
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $username = sanitizeString($_POST['username']);
+    $email = sanitizeString($_POST['email']);
+    $password = sanitizePassword($_POST['password']);
+
+    if ($username == "" || $email == "" || $password == "")
+    {
+        return;
+    }
 
     if(insertDetails($con, $username, $email, $password));
     {
@@ -41,8 +47,13 @@ function insertDetails($con, $username, $email, $password)
 if(isset($_POST['login']))
 {
     $con = config::connect();
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = sanitizeString($_POST['username']);
+    $password = sanitizePassword($_POST['password']);
+
+    if ($username=="" || $password=="")
+    {
+        return;
+    }
 
     if(checkLogin($con, $username, $password))
     {
@@ -69,6 +80,20 @@ function checkLogin($con, $username, $password)
     {
         return FALSE;
     }
-
 }
+
+
+function sanitizeString($string)
+{
+    $string=strip_tags($string);
+    $string=str_replace(" ","",$string);
+    return $string;
+}
+
+function sanitizePassword($string)
+{
+    $string = md5($string);
+    return $string;
+}
+
 ?>
