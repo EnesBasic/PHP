@@ -31,7 +31,7 @@ function getData()
     $data[2] = $_POST["lname"];
     $data[3] = $_POST["adres"];
     $data[4] = $_POST["email"];
-    return data;
+    return $data;
 }
 
 if(isset($_POST["search"]))
