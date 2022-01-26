@@ -12,7 +12,7 @@
         <input type="password" name="password" placeholder="password">
         <input type="submit" value="Login" name="Login">
         <br><br>
-        <a href="login.html">Register</a>
+        <a href="login.php">Register</a>
     </form>
 </body>
 </html>

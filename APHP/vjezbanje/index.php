@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Login Register Project</h1>
-    <a href="login.html">Login</a>
-    <a href="register.html">Register</a>
+    <a href="login.php">Login</a>
+    <a href="register.php">Register</a>
 
 </body>
 </html>

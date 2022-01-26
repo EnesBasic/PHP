@@ -13,6 +13,7 @@
         <input type="password" name="password" placeholder="password">
         <input type="submit" value="Register" name="Register">
         <br><br>
+        <a href="register.php">Register</a>
     </form>
 </body>
 </html>
