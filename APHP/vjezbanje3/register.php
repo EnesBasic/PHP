@@ -28,11 +28,11 @@ try{
 function getData()
 {
     $data = array();
-    $data[0] = $_POST["rollno"];
-    $data[1] = $_POST["fname"];
-    $data[2] = $_POST["lname"];
-    $data[3] = $_POST["adres"];
-    $data[4] = $_POST["email"];
+    $data[0] = $_POST['rollno'];
+    $data[1] = $_POST['fname'];
+    $data[2] = $_POST['lname'];
+    $data[3] = $_POST['adres'];
+    $data[4] = $_POST['email'];
     return $data;
 }
 
