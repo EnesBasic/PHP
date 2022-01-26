@@ -10,7 +10,7 @@
 </head>
 <body>
     <form action="register.php" method="post">
-        <input type="number" name="rollno" placeholder="Roll No" value="<?php echo ($rollno);?>"> <br><br>
+        <input type="number" name="rollno" placeholder="Roll_No" value="<?php echo ($rollno);?>"> <br><br>
         <input type="text" name="fname" placeholder="name..." value="<?php echo ($fname);?>"> <br><br>
         <input type="text" name="lname" placeholder="lastname..." value="<?php echo ($lname);?>"><br><br>
         <input type="text" name="adres" placeholder="address..." value="<?php echo ($adres);?>"><br><br>
