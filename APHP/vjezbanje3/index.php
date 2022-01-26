@@ -20,5 +20,14 @@
             <input type="submit" name="search" value="Find">
         </div>
     </form>
+    <?php
+        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+        try{
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+        }catch(mysqli_SQL_Exceptio $ex){
+            echo("error connecting");
+        }            
+    ?>
 </body>
 </html>
