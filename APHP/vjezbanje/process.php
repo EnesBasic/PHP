@@ -1,7 +1,8 @@
 <?php
 
-ini_set('error_reporting', E_ALL);
-ini_set( 'display_errors', 1 );
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
 
 include_once("config.php");
 
@@ -19,16 +20,12 @@ if(isset($_POST['register']))
 }
 
 
-
 function insertDetails($con, $username, $email, $password)
 {
     $query =  $con->prepare("INSERT INTO users (username, email, password) VALUES(:username, :email, :password)");
-
     $query->bindParam(":username", $username);
     $query->bindParam(":email", $email);
     $query->bindParam(":password", $password);
-
     return $query->execute();
 }
-
 ?>

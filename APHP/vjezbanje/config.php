@@ -20,7 +20,7 @@ class config {
         
     }catch(PDOException $e)
     {
-        echo "Coonnection Failed" .$e->getMessage();
+        echo "Connection Failed" .$e->getMessage();
     }
 
     return $con;
