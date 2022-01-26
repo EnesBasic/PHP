@@ -37,7 +37,7 @@ function getData()
 if(isset($_POST["search"]))
 {
     $info = getData();
-    $search_query = "SELECT*FROM users WHERE rollno='$info[0]'";
+    $search_query = "SELECT * FROM users WHERE rollno='$info[0]'";
     $search_result=mysqli_query($conn, $search_query);
     if($search_result)
     {
