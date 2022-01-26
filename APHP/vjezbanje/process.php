@@ -5,7 +5,7 @@
 
 include_once("config.php");
 
-if(isset($_POST["register"]))
+if(isset($_POST['register']))
 {
     $con = config::connect();
     $username = $_POST['username'];
@@ -22,9 +22,9 @@ if(isset($_POST["register"]))
 
 function insertDetails($con, $username, $email, $password)
 {
-    $query =  $con->prepare("INSERT INTO users
-    (username, email, password)
-    VALUES(:username, :email, :password)   
+    $query =  $con->prepare("
+    INSERT INTO users (username, email, password)
+    VALUES(:username, :email, :password)
     ");
 
     $query->bindParam(":username", $username);
