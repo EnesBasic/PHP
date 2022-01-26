@@ -1,16 +1,18 @@
 <?php
 
-ini_set('error_reporting', E_ALL);
-ini_set( 'display_errors', 1 );
+//ini_set('error_reporting', E_ALL);
+//ini_set( 'display_errors', 1 );
 
 include_once("config.php");
 
-if(isset($_POST['register']))
+if(isset($_POST["register"]))
 {
     $con = config::connect();
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+
+
 
     if(insertDetails($con, $username, $email, $password))
     {
