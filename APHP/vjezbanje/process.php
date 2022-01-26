@@ -5,7 +5,7 @@ ini_set ('log_errors', 'on');
 ini_set ('display_startup_errors', 'on');
 ini_set ('error_reporting', E_ALL);
 
-include("config.php");
+include_once("config.php");
 
 if(isset($_POST['register']))
 {
