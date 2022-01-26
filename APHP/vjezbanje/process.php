@@ -12,13 +12,13 @@ if(isset($_POST['register']))
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-
-
     if(insertDetails($con, $username, $email, $password))
     {
      echo "Details inserted successfully";   
     }
 }
+
+
 
 function insertDetails($con, $username, $email, $password)
 {
