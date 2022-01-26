@@ -5,7 +5,7 @@ ini_set( 'display_errors', 1 );
 
 include_once("config.php");
 
-if(isset($_POST["register"]))
+if(isset($_POST['register']))
 {
     $con = config::connect();
     $username = $_POST['username'];
