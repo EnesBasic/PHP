@@ -22,10 +22,7 @@ if(isset($_POST['register']))
 
 function insertDetails($con, $username, $email, $password)
 {
-    $query =  $con->prepare("
-    INSERT INTO users (username, email, password)
-    VALUES(:username, :email, :password)
-    ");
+    $query =  $con->prepare("INSERT INTO users (username, email, password) VALUES(:username, :email, :password)");
 
     $query->bindParam(":username", $username);
     $query->bindParam(":email", $email);
