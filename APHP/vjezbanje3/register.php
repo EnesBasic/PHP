@@ -1,9 +1,7 @@
 <?php
 
-include ("index.php");
-
-ini_set('error_reporting', E_ALL);
-ini_set( 'display_errors', 1 );
+//ini_set('error_reporting', E_ALL);
+//ini_set( 'display_errors', 1 );
 
 $servername ="localhost";
 $username ="root";
@@ -36,7 +34,7 @@ function getData()
     return $data;
 }
 
-if(isset($_POST["search"]))
+if(isset($_POST['search']))
 {
     $info = getData();
     $search_query = "SELECT * FROM users WHERE rollno='$info[0]'";

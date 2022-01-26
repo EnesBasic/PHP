@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="register.php" method="post">
+    <form action="register.php" method="POST">
         <input type="number" name="rollno" placeholder="Roll_No" value="<?php echo ($rollno);?>"> <br><br>
         <input type="text" name="fname" placeholder="name..." value="<?php echo ($fname);?>"> <br><br>
         <input type="text" name="lname" placeholder="lastname..." value="<?php echo ($lname);?>"><br><br>
