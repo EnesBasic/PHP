@@ -30,6 +30,31 @@ if(isset($_POST['register']))
     }
 }
 
+if($_POST['update']) {
+    $con = config::connect();
+    $username = sanitizeString($_POST['username']);
+    $email = sanitizeString($_POST['email']);
+    $password = sanitizePassword($_POST['password']);
+
+    if ($username == "" || $email == "" || $password == "")
+    {
+        return;
+    }
+
+    $currentUsername = $_SESSION['username'];
+    $query = $con->prepare("SELECT * FROM users WHERE username=:username");
+
+    $query->bindParam(":username", $currentUsername);
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    $id = $result['id'];
+
+    if(updateDetails($con, $id, $username, $email, $password));
+    {
+     //echo ("Details inserted successfully");
+        $_SESSION['username']=$username;
+        header("Location: profile.php");
+    }
+}
 
 function insertDetails($con, $username, $email, $password)
 {
@@ -94,6 +119,18 @@ function sanitizePassword($string)
 {
     $string = md5($string);
     return $string;
+}
+
+function updateDetails($con, $id, $username, $email, $password)
+{
+    $query = $con->prepare("UPDATE users SET username=:username, email=:email, password=:password WHERE id=:id");
+    $query->bindParam(":username", $username);
+    $query->bindParam(":email", $email);
+    $query->bindParam(":password", $password);
+    $query->bindParam(":id", $id);
+
+    return $query->execute();
+    
 }
 
 ?>
