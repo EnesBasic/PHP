@@ -53,7 +53,7 @@ if($_POST['update'])
 
     $id = $result['id'];
 
-    if(updateDetails($con, $username, $email, $password, $id));
+    if(updateDetails($con, $id, $username, $email, $password));
     {
      //echo ("Details inserted successfully");
         $_SESSION['username']=$username;
