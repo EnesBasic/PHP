@@ -30,7 +30,8 @@ if(isset($_POST['register']))
     }
 }
 
-if($_POST['update']) {
+if($_POST['update'])
+{
     $con = config::connect();
     $username = sanitizeString($_POST['username']);
     $email = sanitizeString($_POST['email']);
@@ -44,11 +45,15 @@ if($_POST['update']) {
     $currentUsername = $_SESSION['username'];
     $query = $con->prepare("SELECT * FROM users WHERE username=:username");
 
+    $query->execute();
+
     $query->bindParam(":username", $currentUsername);
+
     $result = $query->fetch(PDO::FETCH_ASSOC);
+
     $id = $result['id'];
 
-    if(updateDetails($con, $id, $username, $email, $password));
+    if(updateDetails($con, $username, $email, $password, $id));
     {
      //echo ("Details inserted successfully");
         $_SESSION['username']=$username;
