@@ -74,7 +74,8 @@ try{
 
 
 
-    $sql_update = "UPDATE user SET name='Dell' datetime='{$date_update}' WHERE name='Rampage'";
+    $sql_update = "UPDATE user SET name='Dell' WHERE name='Rampage'";
+    // Pormjena datuma $sql_update = "UPDATE user SET name='Dell' datetime='{$date_update}' WHERE name='Rampage'";
     //Priprema upita 
     $result = $connection->prepare($sql_update);
     //Izvrsavanje upita (execute moze da vrati neki rezultat, dok exec ne moze)
@@ -86,7 +87,7 @@ try{
     //Formiramo SQL upit za brisanje(OBAVEZNO WHERE)
     //Delete se uvijek odvija nad redovima!
     //Ako biste htjeli obrisati jednu kolonu iskoristili bismo UPDATE(npr. SET name='')
-    $sql_delete = "DELETE FROM user WHERE name='Rampage'";
+    $sql_delete = "DELETE FROM user WHERE name='Dell'";
     //Brisanje samih podataka (redova)
     $connection->exec($sql_delete); 
 
