@@ -35,15 +35,38 @@ try{
     //Prolazimo kroz rezultate (value je opet sam red koji je opet podniz)
     echo "<ul>";
     foreach ($results as $column => $value){
-        echo "<li>".$value["name"]."</li>";
+        //Prva generalna upotreba podataka: ISPIS
+        //name bi mogli da boldiramo
+        echo "<li><strong>".$value["name"]."</strong></li>";
         echo "<li>".$value["password"]."</li>";
         echo "<li>".$value["datetime"]."</li>";
+
+        //Druga generalna upotreba : AKTIVIRANJE NEKE FUNKCIONALNOSTI
         if($value["status"]=="1"){
             echo "<li>Aktivan korisnik</li>";
+            //header("Location: dashboard.php")
         }else{
             echo "<li>NeAktivan korisnik</li>";
+            //header("Location: inactive.php")
         }
+        echo "<br>";
     }
+
+    echo "</ul>";
+
+    //Kako dobiti automatski vrijeme i datum
+    $date = date("H:i:s d.m.Y");
+
+
+    //Unos samih podataka
+
+    $sql_insert = "INSERT INTO user
+    (name, password, datetime, status)
+    VALUES
+    ('rampage', '5678','{$date}' ,'1')";
+
+    //Izvrsavanje samog query-a
+    $connection->exec($sql_insert);
 
 }catch(PDOException $e){
     //echo "Connection failed!".$e->getMessage();
