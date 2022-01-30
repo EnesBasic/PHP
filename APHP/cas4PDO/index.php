@@ -60,19 +60,21 @@ try{
 
     //Unos samih podataka
 
-    //$sql_insert = "INSERT INTO user
-    //(name, password, datetime, status)
-    //VALUES
-    //('Doli', '5678','{$date_update}' ,'0')";
+    $sql_insert = "INSERT INTO user
+    (name, password, datetime, status)
+    VALUES
+    ('Doli', '5678','{$date_update}' ,'0')";
 
     //Izvrsavanje samog query-a
-    //$connection->exec($sql_insert);
+    $connection->exec($sql_insert);
+
+    // Trebalo bi da bude nakon INSERTA(Moze biti funkcionalnosti izmedu ali ne sa bazom ako hocemo da funkcionise)
+    //Prikaz posljednje unijetog ID-(Ovo je vazano za trenutnu konekciju)
+    echo "<p>".$last_insert_id = $connection->lastInsertId() . "</p>";
 
     //Updateovanje podataka unutar tabele
     //Fromiranje Update datuma (jer recimo zelimo da izmijenimo i timeset sto je pozeljno)
     //Kreiranje upita
-
-
 
     $sql_update = "UPDATE user SET name='Dell' WHERE name='Rampage'";
     // Pormjena datuma $sql_update = "UPDATE user SET name='Dell' datetime='{$date_update}' WHERE name='Rampage'";
@@ -81,7 +83,7 @@ try{
     //Izvrsavanje upita (execute moze da vrati neki rezultat, dok exec ne moze)
     $result->execute();
     //Ispis broja redova koji su se promijenili koristeci ovaj upit iznad
-    echo $result->rowCount(). "records updated!"; 
+    echo $result->rowCount(). " records updated!"; 
 
     //Brisanje samih podataka
     //Formiramo SQL upit za brisanje(OBAVEZNO WHERE)
@@ -92,6 +94,7 @@ try{
     $connection->exec($sql_delete); 
 
 
+    
 
 
 }catch(PDOException $e){
