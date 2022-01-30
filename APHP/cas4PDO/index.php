@@ -20,6 +20,7 @@ try{
     echo "Connection failed!".$e->getMessage();
 }
 
-
+//ponistavanje konekcije
+$connection = null;
 
 ?>
