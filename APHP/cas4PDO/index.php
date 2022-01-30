@@ -55,18 +55,43 @@ try{
     echo "</ul>";
 
     //Kako dobiti automatski vrijeme i datum
-    $date = date("H:i:s d.m.Y");
+    $date_update = date("H:i:s d.m.Y");
 
 
     //Unos samih podataka
 
-    $sql_insert = "INSERT INTO user
-    (name, password, datetime, status)
-    VALUES
-    ('Doli', '5678','{$date}' ,'0')";
+    //$sql_insert = "INSERT INTO user
+    //(name, password, datetime, status)
+    //VALUES
+    //('Doli', '5678','{$date_update}' ,'0')";
 
     //Izvrsavanje samog query-a
-    $connection->exec($sql_insert);
+    //$connection->exec($sql_insert);
+
+    //Updateovanje podataka unutar tabele
+    //Fromiranje Update datuma (jer recimo zelimo da izmijenimo i timeset sto je pozeljno)
+    //Kreiranje upita
+
+
+
+    $sql_update = "UPDATE user SET name='Dell' datetime='{$date_update}' WHERE name='Rampage'";
+    //Priprema upita 
+    $result = $connection->prepare($sql_update);
+    //Izvrsavanje upita (execute moze da vrati neki rezultat, dok exec ne moze)
+    $result->execute();
+    //Ispis broja redova koji su se promijenili koristeci ovaj upit iznad
+    echo $result->rowCount(). "records updated!"; 
+
+    //Brisanje samih podataka
+    //Formiramo SQL upit za brisanje(OBAVEZNO WHERE)
+    //Delete se uvijek odvija nad redovima!
+    //Ako biste htjeli obrisati jednu kolonu iskoristili bismo UPDATE(npr. SET name='')
+    $sql_delete = "DELETE FROM user WHERE name='Rampage'";
+    //Brisanje samih podataka (redova)
+    $connection->exec($sql_delete); 
+
+
+
 
 }catch(PDOException $e){
     //echo "Connection failed!".$e->getMessage();
