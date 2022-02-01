@@ -5,7 +5,7 @@ ini_set ('log_errors', 'on');
 ini_set ('display_startup_errors', 'on');
 ini_set ('error_reporting', E_ALL);
 
-@$ime = $_GET['ime'];
+@$ime = $_GET["Enes"];
 echo @$ime;
 echo "Dali ovo dalje funkcionise <br>";
 
@@ -48,7 +48,7 @@ class Test{
      * @return string
      */
 
-
+    # @method write...;
     public function write(){
         return
         "Username". $this->username;
