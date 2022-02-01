@@ -63,7 +63,7 @@ try{
     $sql_insert = "INSERT INTO user
     (name, password, datetime, status)
     VALUES
-    ('Doli', '5678','{$date_update}' ,'0')";
+    ('Doli', '5678','{$date_update}' ,'1')";
 
     //Izvrsavanje samog query-a
     $connection->exec($sql_insert);
