@@ -6,7 +6,9 @@ ini_set ('display_startup_errors', 'on');
 ini_set ('error_reporting', E_ALL);
 
 
-require "user.php";
-require "user.class.php";
+class user{
+    echo "<h1> Pozdrav svima</h1>";
+}
+
 
 ?>
