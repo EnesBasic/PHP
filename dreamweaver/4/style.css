@@ -49,9 +49,47 @@ a{
     color: #333;
     transition: all 250ms ease-in-out;
     display: inline-block;
+    background: #FFF;
+    font-size: 18px;
 }
+
+.button-horizontal{
+    width: 200px;
+    margin: 10px 30px;
+}
+
 
 .button:hover{
     background: #333;
     color: #eee;
+}
+
+.input{
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.input:hover{
+    outline: none;
+    border-bottom: 1px solid #b30b0b;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -16,11 +16,21 @@
             <img class="main-logo" src="https://adminlab387.b-cdn.net/dist/images/logos/logo.png" alt="Application logo">
             <p>Login into your account to start working with this application!</p>
             <br>
-            <input type="text" name="email" placeholder="Insert your email here">
-            <br>
-            <input type="text" name="password" placeholder="Insert your password here:">
-            <br>
-            
+            <form action="#" method="POST">
+                <input class="input" type="text" name="email" placeholder="Insert your email here">
+                <br>
+                <input class="input" type="text" name="password" placeholder="Insert your password here:">
+                <div class="row">
+                    <div class="left">
+                        <input type="checkbox"
+                        name="remeber-me">
+                        <span>Remeber my login</span>
+                        <div class="right">
+                            <input class="button button-horizontal" type="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>
