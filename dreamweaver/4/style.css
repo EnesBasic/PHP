@@ -10,6 +10,7 @@ a{
 
 *{
     box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .wrapper{
@@ -19,4 +20,38 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.wrapper .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper .container .main-logo{
+    width: 100%;
+    max-width: 300px;
+    display: inline-block;
+    margin-bottom: 100px;
+}
+
+.button{
+    margin: 10px 0;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px 0;
+    color: #333;
+    transition: all 250ms ease-in-out;
+    display: inline-block;
+}
+
+.button:hover{
+    background: #333;
+    color: #eee;
 }
