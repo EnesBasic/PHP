@@ -51,14 +51,12 @@ a{
     display: inline-block;
     background: #FFF;
     font-size: 18px;
-    margin: 20px 30px;
 }
 
 .button-horizontal{
     width: 200px;
     margin: 10px 30px;
 }
-
 
 .button:hover{
     background: #333;
