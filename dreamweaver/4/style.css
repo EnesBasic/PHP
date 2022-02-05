@@ -152,6 +152,7 @@ a{
     justify-content:space-between;
     align-items: center;
     padding: 20px;
+    position:sticky;
 }
 
 .wrapper-internal footer ul li {
