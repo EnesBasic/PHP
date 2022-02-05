@@ -145,4 +145,26 @@ a{
     color: #333;
 }
 
+.wrapper-internal footer {
+    background:#eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+}
 
+.wrapper-internal footer ul li {
+display: inline-block;
+}
+
+.wrapper-internal footer ul li a {
+    color:#2ea3f2;
+    padding:5px 15px;
+    transition: all 250ms ease-in-out;
+}
+
+.wrapper-internal footer ul li a:hover {
+    background:#eee;
+    color: #333;
+}
