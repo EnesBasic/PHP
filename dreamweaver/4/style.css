@@ -97,3 +97,12 @@ a{
 .text-center{
     text-align: center;
 }
+
+.hr{
+    width: 100%;
+}
+
+.m50{
+    margin-bottom: 50px;
+}
+
