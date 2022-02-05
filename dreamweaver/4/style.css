@@ -106,3 +106,26 @@ a{
     margin-bottom: 50px;
 }
 
+
+.wrapper-internal{
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.wrapper-internal header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.wrapper-internal header .nav-logo{
+    width: 100%;
+    max-width: 200px;
+}
+
+.wrapper-internal nav ul li{
+    display: inline-block;
+}
+
