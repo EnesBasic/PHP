@@ -107,14 +107,14 @@ a{
 }
 
 
-.wrapper-internal{
+.wrapper-internal {
     width: 100%;
     min-height: 100vh;
     max-width: 1920px;
     margin: 0 auto;
 }
 
-.wrapper-internal header{
+.wrapper-internal header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -126,24 +126,23 @@ a{
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-.wrapper-internal header .nav-logo{
+.wrapper-internal header .nav-logo {
     width: 100%;
     max-width: 200px;
 }
 
-.wrapper-internal > nav > ul > li{
+.wrapper-internal nav ul li {
     display: inline-block;
 }
 
-.wrapper-internal > nav > ul > li > a{
+.wrapper-internal nav ul li a {
     color:#2ea3f2;
     padding:5px 15px;
     transition: all 250ms ease-in-out;
 }
-.wrapper-internal > nav > ul > li > a:hover{
+.wrapper-internal nav ul li a:hover {
     background:#eee;
     color: #333;
-
 }
 
 
