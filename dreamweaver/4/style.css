@@ -169,3 +169,72 @@ display: inline-block;
     background:#eee;
     color: #333;
 }
+
+/*Main-container selector*/
+
+.wrapper-internal .main-container {
+    display: flex;
+}
+
+/* Aside elemenr inside the wrapper*/
+
+.wrapper-internal .main-container aside {
+    width:15%;
+    min-width: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    height:80vh;
+    position:sticky;
+    top: 10vh;
+}
+
+.wrapper-internal .main-container aside ul {
+    width: 80%;
+    text-align: center;
+    font: size 18px;
+    padding: 0;
+}
+
+.wrapper-internal .main-container aside li {
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-right:1px solid rgba(0,0,0,0.2);
+    border-top:1px solid rgba(0,0,0,0.2);
+}
+
+.wrapper-internal .main-container aside ul li a {
+    padding: 10px 0;
+    color: #2ea3f2;
+    width: 100%;
+    display: inline-block;
+    transition: all 250ms ease-in-out;
+}
+
+.wrapper-internal .main-container aside ul li a:hover {
+    background:#eee;
+    color: #333;
+}
+
+.wrapper-internal .main-container main {
+    width:85%;
+}
+
+.wrapper-internal .main-container h1 {
+    text-align: center;
+    margin: 40px;
+}
+
+.wrapper-internal .main-container main .container {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.wrapper-internal .main-container main .container .card {
+    width: 370px;
+    display:inline-block;
+    margin:10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding:20px;
+}
