@@ -47,35 +47,25 @@ require "connection.php";
                 </tr>
             </thead>
             <tbody>
-                <?php
+    <?php
                 
-                foreach($results as $column => $value){
-                    echo "<tr>";
-                    echo "<td>" .$value["id"]. "</td>";
-                    echo "<td>" .$value["name"]. "</td>";
-                    echo "<td>" .$value["password"]. "</td>";
-                    echo "<td>" .$value["datetime"]. "</td>";
+        foreach($results as $column => $value){
+            echo "<tr>";
+            echo "<td>" .$value["id"]. "</td>";
+            echo "<td>" .$value["name"]. "</td>";
+            echo "<td>" .$value["password"]. "</td>";
+            echo "<td>" .$value["datetime"]. "</td>";
 
-                    if($value["status"]=="1"){
-                        echo "<td> Aktivan </td>";
-                    }else{
-                        echo "<td> NeAktivan </td>"; 
-                    }
+                if($value["status"]=="1"){
+                    echo "<td> Aktivan </td>";
+                }else{
+                    echo "<td> NeAktivan </td>"; 
                 }
+        }
 
     ?>
             </tbody>
-        </table>
-
-  
+    </table>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
