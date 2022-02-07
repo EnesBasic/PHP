@@ -27,6 +27,7 @@ require "connection.php";
             justify-content:center;
             align-items:center;
         }
+    </style>
 </head>
 <body>
     <?php
@@ -40,37 +41,37 @@ require "connection.php";
     $sql->execute();
     $result = $sql->setFechMode(PDO::FECTH_ASSOC);
     $results = $sql->fetchAll();
-    
     ?>
-        <div class="wrapper"> </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>PASSWORD</th>
-                        <th>DATE AND TIME</th>
-                        <th>STATUS</th>
-                    </tr>
-                </thead>
-                <tbody>
 
-        <?php    
-            foreach($results as $column => $value){
-                echo "<tr>";
-                echo "<td>" .$value["id"]. "</td>";
-                echo "<td>" .$value["name"]. "</td>";
-                echo "<td>" .$value["password"]. "</td>";
-                echo "<td>" .$value["datetime"]. "</td>";
+    <div class="wrapper"> </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PASSWORD</th>
+                    <th>DATE AND TIME</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+                
+            <tbody>
+                <?php    
+                    foreach($results as $column => $value){
+                        echo "<tr>";
+                        echo "<td>" .$value["id"]. "</td>";
+                        echo "<td>" .$value["name"]. "</td>";
+                        echo "<td>" .$value["password"]. "</td>";
+                        echo "<td>" .$value["datetime"]. "</td>";
 
-                    if($value["status"]=="1"){
-                        echo "<td> Aktivan </td>";
-                    }else{
-                        echo "<td> NeAktivan </td>"; 
+                        if($value["status"]=="1"){
+                            echo "<td> Aktivan </td>";
+                        }else{
+                            echo "<td> NeAktivan </td>"; 
+                        }
                     }
-            }
-        ?>
-               </tbody>
+                ?>
+            </tbody>
         </table>
     </div>
 
