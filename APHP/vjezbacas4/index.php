@@ -14,21 +14,10 @@ require "connection.php";
     <meta name="descritpion" content="..."
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Dashboard</title>
-    <style>
-        table, tr, td, th{
-            border:1px solid #000;
-            border-collapse:collapse;
-        }
-        .wrapper{
-            width:100%;
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-        }
-    </style>
 </head>
+
 <body>
     <?php
     
