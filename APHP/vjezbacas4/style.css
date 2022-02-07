@@ -1,4 +1,4 @@
-table, tr, td, th{
+.wrapper table, tr, td, th{
     border:1px solid #000;
     border-collapse:collapse;
 }

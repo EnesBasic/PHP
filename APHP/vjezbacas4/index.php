@@ -1,6 +1,11 @@
 <?php
 
-require "connection.php";
+ini_set ('display_errors', 'on');
+ini_set ('log_errors', 'on');
+ini_set ('display_startup_errors', 'on');
+ini_set ('error_reporting', E_ALL);
+
+//require "connection.php";
 
 ?>
 
@@ -19,19 +24,15 @@ require "connection.php";
 </head>
 
 <body>
-    <?php
-    
-    ini_set ('display_errors', 'on');
-    ini_set ('log_errors', 'on');
-    ini_set ('display_startup_errors', 'on');
-    ini_set ('error_reporting', E_ALL);
+       
+<!--
 
     $sql = $connection->prepare("SELECT * FROM user");
     $sql->execute();
     $result = $sql->setFechMode(PDO::FECTH_ASSOC);
     $results = $sql->fetchAll();
     ?>
-
+-->
     <div class="wrapper"> </div>
         <table>
             <thead>
