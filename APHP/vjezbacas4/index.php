@@ -1,11 +1,11 @@
 <?php
-
+   
 ini_set ('display_errors', 'on');
 ini_set ('log_errors', 'on');
 ini_set ('display_startup_errors', 'on');
 ini_set ('error_reporting', E_ALL);
 
-//require "connection.php";
+require "connection.php";
 
 ?>
 
@@ -19,20 +19,30 @@ ini_set ('error_reporting', E_ALL);
     <meta name="descritpion" content="..."
     <meta name="author" content="@Enes Basic">
     <meta name="robots" content="nofollow">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Dashboard</title>
+    <style>
+        table, tr, td, th{
+            border:1px solid #000;
+            border-collapse:collapse;
+        }
+        .wrapper{
+            width:100%;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+    </style>
 </head>
-
 <body>
-       
-<!--
-
+    <?php
+ 
     $sql = $connection->prepare("SELECT * FROM user");
     $sql->execute();
     $result = $sql->setFechMode(PDO::FECTH_ASSOC);
     $results = $sql->fetchAll();
     ?>
--->
+
     <div class="wrapper"> </div>
         <table>
             <thead>
