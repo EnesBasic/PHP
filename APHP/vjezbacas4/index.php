@@ -54,8 +54,8 @@ require "connection.php";
                     </tr>
                 </thead>
                 <tbody>
-        <?php
-                    
+
+        <?php    
             foreach($results as $column => $value){
                 echo "<tr>";
                 echo "<td>" .$value["id"]. "</td>";
@@ -69,12 +69,10 @@ require "connection.php";
                         echo "<td> NeAktivan </td>"; 
                     }
             }
-
         ?>
-                </tbody>
+               </tbody>
         </table>
     </div>
 
 </body>
 </html>
-
