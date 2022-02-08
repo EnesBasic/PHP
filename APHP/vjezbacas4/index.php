@@ -1,61 +1,43 @@
 <?php
-   
+
 ini_set ('display_errors', 'on');
 ini_set ('log_errors', 'on');
 ini_set ('display_startup_errors', 'on');
 ini_set ('error_reporting', E_ALL);
 
-require "connection.php";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "ita_app";
 
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="descritpion" content="..."
-    <meta name="author" content="@Enes Basic">
-    <meta name="robots" content="nofollow">
-    <title>Dashboard</title>
-    <style>
-        table, tr, td, th{
-            border:1px solid #000;
-            border-collapse:collapse;
-        }
-        .wrapper{
-            width:100%;
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-        }
-    </style>
-</head>
-<body>
-    <?php
- 
+try{
+    $connection = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connection established";
     $sql = $connection->prepare("SELECT * FROM user");
     $sql->execute();
-    $result = $sql->setFechMode(PDO::FECTH_ASSOC);
+    $result = $sql->setFechMode(PDO::FETCH_ASSOC);
     $results = $sql->fetchAll();
-    ?>
 
-    <div class="wrapper"> </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>PASSWORD</th>
-                    <th>DATE AND TIME</th>
-                    <th>STATUS</th>
-                </tr>
-            </thead>                
-        </table>
-    </div>
+    echo "<ul>";
+    foreach($results as $column => $value){
+        echo "<li>";
+        echo "<li>" .$value["id"]. "</li>";
+        echo "<li>" .$value["name"]. "</li>";
+        echo "<li>" .$value["password"]. "</li>";
+        echo "<li>" .$value["datetime"]. "</li>";
 
-</body>
-</html>
+        if($value["status"]=="1"){
+            echo "<li> Aktivan </li>";
+        }else{
+            echo "<li> NeAktivan </li>"; 
+        }
+    }
+    echo "</ul>";
+
+}catch(PDOException $e){
+    echo "connection error: " .$e->getMessage();
+}
+
+$connection= null;
+?>
