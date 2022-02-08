@@ -53,25 +53,7 @@ require "connection.php";
                     <th>DATE AND TIME</th>
                     <th>STATUS</th>
                 </tr>
-            </thead>
-                
-            <tbody>
-                <?php    
-                    foreach($results as $column => $value){
-                        echo "<tr>";
-                        echo "<td>" .$value["id"]. "</td>";
-                        echo "<td>" .$value["name"]. "</td>";
-                        echo "<td>" .$value["password"]. "</td>";
-                        echo "<td>" .$value["datetime"]. "</td>";
-
-                        if($value["status"]=="1"){
-                            echo "<td> Aktivan </td>";
-                        }else{
-                            echo "<td> NeAktivan </td>"; 
-                        }
-                    }
-                ?>
-            </tbody>
+            </thead>                
         </table>
     </div>
 
