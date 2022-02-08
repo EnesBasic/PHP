@@ -30,38 +30,39 @@ require "connection.php";
     $result = $sql -> setFetchMode(PDO::FETCH_ASSOC);
     $results = $sql-> fetchAll();
     ?>
+    <div class="wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PASSWORD</th>
+                    <th>DATE and TIME</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                
+                    foreach($results as $column => $value){
+                        echo "<tr>";
+                        echo "<td>" .$value["id"]. "</td>";
+                        echo "<td>" .$value["name"]. "</td>";
+                        echo "<td>" .$value["password"]. "</td>";
+                        echo "<td>" .$value["datetime"]. "</td>";
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>PASSWORD</th>
-                <th>DATE and TIME</th>
-                <th>STATUS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            
-                foreach($results as $column => $value){
-                    echo "<tr>";
-                    echo "<td>" .$value["id"]. "</td>";
-                    echo "<td>" .$value["name"]. "</td>";
-                    echo "<td>" .$value["password"]. "</td>";
-                    echo "<td>" .$value["datetime"]. "</td>";
-
-                    if ($value["status"] == "1"){
-                        echo "<td> Aktivan </td>";
-                    }else{
-                        echo "<td> Neaktivan </td>";
+                        if ($value["status"] == "1"){
+                            echo "<td> Aktivan </td>";
+                        }else{
+                            echo "<td> Neaktivan </td>";
+                        }
+                        echo "</tr>";
                     }
-                    echo "</tr>";
-                }
-            
-            ?>
-        </tbody>
-    </table>
+                
+                ?>
+            </tbody>
+        </table>
+    </div>
 
     <?php  
     if(isset($_GET["message"]) && !empty($_GET["message"])){
