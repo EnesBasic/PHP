@@ -16,6 +16,7 @@ try{
     echo "Connection established";
     $sql = $connection->prepare("SELECT * FROM user");
     $sql->execute();
+    
     $result = $sql->setFechMode(PDO::FETCH_ASSOC);
     $results = $sql->fetchAll();
 
