@@ -12,20 +12,10 @@ $password = "";
 $database = "ita_app";
 
 try{
-    $conn = new PDO ("mysql:host=$servername; dbname=$database", $username, $password);
-    $conn->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $connection = new PDO ("mysql:host=$servername; dbname=$database", $username, $password);
+    $connection -> setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connection established";
-
-
-
 }catch(PDOException $e){
     echo "connection error: " .$e->getMessage();
 }
-
-$conn = null;
-?>
-
-
-
-
 ?>

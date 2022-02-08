@@ -1,3 +1,14 @@
+<?php
+
+ini_set ('display_errors', 'on');
+ini_set ('log_errors', 'on');
+ini_set ('display_startup_errors', 'on');
+ini_set ('error_reporting', E_ALL);
+
+require "connection.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,40 +23,50 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="form_pos";>
-    <h1 class="title">Register Form</h1>
-        <form class="forma_deg" action="process.php" method="POST">
-            <div>
-                <label class="label">Username</label>
-                <input class="input" type="text" name="username" required maxlength="100">
-            </div>
-
-            <div>
-                <label class="label">Password</label>
-                <input class="input" type="password" name="password" required maxlength="256">
-            </div>      
-            <div>
-                <label class="label">E-mail</label>
-                <input class="input" type="email" name="email" required maxlength="50">
-            </div>
-            <br>
-            <div>
-                <button type="submit" name="login" class="btn">Register</button>
-            </div>
-        </form>
-    </div>
     <?php
     
+    $sql = $connection -> prepare("SELECT * FROM user");
+    $sql->execute();
+    $result = $sql -> setFetchMode(PDO::FETCH_ASSOC);
+    $results = $sql-> fetchAll();
+    ?>
 
-    ini_set ('display_errors', 'on');
-    ini_set ('log_errors', 'on');
-    ini_set ('display_startup_errors', 'on');
-    ini_set ('error_reporting', E_ALL);
-    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PASSWORD</th>
+                <th>DATE and TIME</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            
+                foreach($results as $column => $value){
+                    echo "<tr>";
+                    echo "<td>" .$value["id"]. "</td>";
+                    echo "<td>" .$value["name"]. "</td>";
+                    echo "<td>" .$value["password"]. "</td>";
+                    echo "<td>" .$value["datetime"]. "</td>";
+
+                    if ($value["status"] == "1"){
+                        echo "<td> Aktivan </td>";
+                    }else{
+                        echo "<td> Neaktivan </td>";
+                    }
+                    echo "</tr>";
+                }
+            
+            ?>
+        </tbody>
+    </table>
+
+    <?php  
     if(isset($_GET["message"]) && !empty($_GET["message"])){
         echo "<h2>" .$_GET["message"]. "</h2>";
     }
-    
     ?>
 
 </body>
