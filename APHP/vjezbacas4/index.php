@@ -39,6 +39,8 @@ require "connection.php";
                     <th>PASSWORD</th>
                     <th>DATE and TIME</th>
                     <th>STATUS</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
                 </tr>
             </thead>
             <tbody>
