@@ -69,10 +69,10 @@ require "connection.php";
         </table>
     </div>
 
-    <?php  
-    if(isset($_GET["message"]) && !empty($_GET["message"])){
-        echo "<h2>" .$_GET["message"]. "</h2>";
-    }
+    //<?php  
+    //if(isset($_GET["message"]) && !empty($_GET["message"])){
+    //    echo "<h2>" .$_GET["message"]. "</h2>";
+    //}
     ?>
 
 </body>
