@@ -43,26 +43,29 @@ require "connection.php";
                     <th>DELETE</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
-                
-                    foreach($results as $column => $value){
-                        echo "<tr>";
-                        echo "<td>" .$value["id"]. "</td>";
-                        echo "<td>" .$value["name"]. "</td>";
-                        echo "<td>" .$value["password"]. "</td>";
-                        echo "<td>" .$value["datetime"]. "</td>";
+                <tbody>
+                    <?php
+                    
+                        foreach($results as $column => $value){
+                            echo "<tr>";
+                                echo "<td>" .$value["id"]. "</td>";
+                                echo "<td>" .$value["name"]. "</td>";
+                                echo "<td>" .$value["password"]. "</td>";
+                                echo "<td>" .$value["datetime"]. "</td>";
 
-                        if ($value["status"] == "1"){
-                            echo "<td> Aktivan </td>";
-                        }else{
-                            echo "<td> Neaktivan </td>";
+                                if ($value["status"] == "1"){
+                                    echo "<td> Aktivan </td>";
+                                }else{
+                                    echo "<td> Neaktivan </td>";
+                                }
+                            
+                                echo "<td><a href='edit.php?id=" . $value["id"] . "'>Edit</a></td>";
+                                echo "<td><a href='delete.php?id=" . $value["id"] . "'>Delete</a></td>";
+                            echo "</tr>";
                         }
-                        echo "</tr>";
-                    }
-                
-                ?>
-            </tbody>
+                    
+                    ?>
+                </tbody>
         </table>
     </div>
 
