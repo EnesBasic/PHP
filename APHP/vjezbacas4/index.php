@@ -1,94 +1,52 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="descritpion" content="..."
+    <meta name="author" content="@Enes Basic">
+    <meta name="robots" content="nofollow">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="form_pos";>
+    <h1 class="title">Register Form</h1>
+        <form class="forma_deg" action="process.php" method="POST">
+            <div>
+                <label class="label">Username</label>
+                <input class="input" type="text" name="username" required maxlength="100">
+            </div>
 
-ini_set ('display_errors', TRUE);
-ini_set ('log_errors', TRUE);
-ini_set ('display_startup_errors', TRUE);
-ini_set ('error_reporting', E_ALL);
+            <div>
+                <label class="label">Password</label>
+                <input class="input" type="password" name="password" required maxlength="256">
+            </div>      
+            <div>
+                <label class="label">E-mail</label>
+                <input class="input" type="email" name="email" required maxlength="50">
+            </div>
+            <br>
+            <div>
+                <button type="submit" name="login" class="btn">Register</button>
+            </div>
+        </form>
+    </div>
+    <?php
+    
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "ita_app";
-
-try{
-    $conn = new PDO ("mysql:host=$servername; dbname=$database", $username, $password);
-    $conn->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connection established";
-    $sql = $conn-> prepare("SELECT * FROM user");
-    $sql-> execute();
-
-    $result = $sql->setFetchMode(PDO::FETCH_ASSOC);
-    $results = $sql->fetchAll();
- 
-    echo "<ul>";
-    foreach ($results as $column => $value) {
-        echo "<li>" .$value["name"]. "</li>";
-        echo "<li>" .$value["password"]. "</li>";
-        echo "<li>" .$value["datetime"]. "</li>";
-        if($value["status"]==1){
-            echo "<li> Aktivan korisnik </li>";
-            //header("Location:dashboard.php");
-        }else{
-            echo "<li> Ne Aktivan korisnik </li>";
-            //header("Location:inactive.php");
-        }
-        echo "<li><br></li>";
+    ini_set ('display_errors', 'on');
+    ini_set ('log_errors', 'on');
+    ini_set ('display_startup_errors', 'on');
+    ini_set ('error_reporting', E_ALL);
+    
+    if(isset($_GET["message"]) && !empty($_GET["message"])){
+        echo "<h2>" .$_GET["message"]. "</h2>";
     }
-    echo "</ul>";
-
-    // Kako dobiti automatski datum i vrijeme
-    $date = date("H:i:s d.m.Y");
-
-    //Unos samih podataka
-    $sql_insert = "INSERT INTO user 
-    (name, password, datetime, status)
-    VALUES ('Rampage', '5678', '{$date}', '1')";
-
-    //Prikaz posljednje unijetog ID-a (ovo je vezno zatrenutnu konekciju )
-    //Dolazi neposredno poslije Inserta(moze biti funkcionalnosti izmedu ali ne sa bazom ako hoce)mo da funckcionise)
-    echo "<p>" .$last_insert_id= $conn->lastInsertId(). "</p>";
-
-    //Izvrsavanje samog querija
-    $conn->exec($sql_insert);
-    echo "<p>Nesto trece...</p>";
-
-    // Updateovanje podataka unutar tabele
-
-    // Formiranje update datuma
-    $date_update = date("H:i:s d.m.Y");
-
-    // kreiranje upita
-    $sql_update = "UPDATE user SET name='Rampage', datetime='{$date_update}' WHERE name='Dell'";
     
-    //Prirpema upita
-    $result = $conn->prepare($sql_update);
-    
-    // Izvrsavanje upita (execute moze da vrati neki rezultat, dok exec ne moze)
-    $result -> execute();
-    
-    //Opcionalno ispis broja redova koji su se promijenili koristeci ovaj upit iznad
-    echo $result-> rowCount(). "records updated!";
+    ?>
 
-    //Brisanje samih podataka (OBAVEZNO WHERE)
-    //Delete se uvijek odvija nad redovima
-    //Ako biste htjeli jednu kolonu iskoristili bismo (npr SET name='')
-    // Formiramo SQL upit za brisanje
-    $sql_delete= "DELETE FROM user WHERE name='Rampage'";
-    
-    //Brisanje samih redova
-    $conn->exec($sql_delete);
-
-
-
-
-
-
-
-
-
-}catch(PDOException $e){
-    echo "connection error: " .$e->getMessage();
-}
-
-$conn = null;
-?>
+</body>
+</html>
