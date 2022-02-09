@@ -36,7 +36,7 @@ require "connection.php";
             <select name="status" required> 
                 <option value="" disabled>Odaberi:</option>
                 <option value="1">Aktivan</option>
-                <option value="0">Neaktivan</option>
+                <option value="nula">Neaktivan</option>
             </select>
             <br>
             <input type="submit" value="Unesi korisnika">

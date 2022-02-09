@@ -8,6 +8,9 @@ if(isset($_POST["name"]) && isset($_POST["password"]) && isset($_POST["status"])
         $password = $_POST["password"];
         $status = $_POST["status"];
         $datetime = date("H:i:s d.m.Y");
+        if($status == "nula"){
+            $status = 0;
+        }
 
         $name = trim($name);
         $password = trim($password);
