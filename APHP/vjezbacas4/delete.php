@@ -49,7 +49,7 @@ ini_set ('error_reporting', E_ALL);
     
     ?>
     <div class="wrapper">
-        <form action="delete_function.php">
+        <form action="delete_function.php" method="POST">
             <h1>Dali ste sigurni da zelite obrisati ovog korsnika</h1>
             <ul>
                 <li>Ime: <?php echo $name; ?> </li>
@@ -64,7 +64,7 @@ ini_set ('error_reporting', E_ALL);
                 ?>
             </ul>
             <br>
-            <input type="hidden" value="<?php echo $id; ?>">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="submit" value="Obrisi Korisnika">
             <a href="index.php">Idi nazad</a>
         </form>
