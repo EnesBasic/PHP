@@ -67,6 +67,7 @@ require "connection.php";
                     ?>
                 </tbody>
         </table>
+        <a href="insert.php">Unesi novog korisnika</a>
     </div>
 
     //<?php  
