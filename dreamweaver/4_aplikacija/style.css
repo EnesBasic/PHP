@@ -133,6 +133,7 @@ a{
     position:sticky;
     top: 0px;
     border-bottom: 1px solid rgba(0,0,0,0.2);
+    flex-direction: column;
 }
 
 .wrapper-internal header .nav-logo {
@@ -161,7 +162,6 @@ a{
     justify-content:space-between;
     align-items: center;
     padding: 20px;
-    position:sticky;
 }
 
 .wrapper-internal footer ul li {
@@ -179,33 +179,64 @@ display: inline-block;
     color: #333;
 }
 
+@media screen and (max-width:880px) {
+
+    .wrapper-internal header .nav-logo{
+        max-width: 120px;   
+    }
+
+    .wrapper-internal footer{
+        flex-direction:relative;
+    }
+
+    .wrapper-internal header, .wrapper-internal footer{
+        flex-direction: column;
+    }
+    .wrapper-internal header ul, .wrapper-internal footer ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        margin: 20px;
+        padding:0;
+    }
+    .wrapper-internal header ul li, .wrapper-internal footer ul li{
+        margin: 5px 0;
+    }
+}
+
 /*Main-container selector*/
 
 .wrapper-internal .main-container {
     display: flex;
+    flex-direction: column;
+    align-items:center;
 }
 
 /* Aside elemenr inside the wrapper*/
 
 .wrapper-internal .main-container aside {
-    width:15%;
-    min-width: 300px;
-    display:flex;
-    align-items: center;
-    justify-content: flex-start;
-    height:80vh;
-    position:sticky;
-    top: 10vh;
+    width: 100%;
+    justify-content: center;
+    min-width: auto;
+    align-items: flex-start;
+    height:auto;
+    position: relative;
+    top:20px;
+    position: sticky;
+
 }
 
 .wrapper-internal .main-container aside ul {
-    width: 80%;
-    text-align: center;
+    width: 90%;
+    display:flex; 
+    overflow-x: scroll;
     font: size 18px;
     padding: 0;
 }
 
 .wrapper-internal .main-container aside li {
+    border: none;
+    min-width: 150px;
     list-style-type: none;
     border-bottom: 1px solid rgba(0,0,0,0.2);
     border-right:1px solid rgba(0,0,0,0.2);
@@ -223,6 +254,18 @@ display: inline-block;
 .wrapper-internal .main-container aside ul li a:hover {
     background:#eee;
     color: #333;
+}
+
+@media screen and (max-width:750px){
+
+    .wrapper-internal header {
+        z-index: 1000;
+    }
+
+    .wrapper-internal .main-container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .wrapper-internal .main-container main {
