@@ -205,7 +205,7 @@ display: inline-block;
 }
 
 /*Main-container selector*/
-/*
+
 .wrapper-internal .main-container {
     display: flex;
     flex-direction: column;
@@ -213,7 +213,7 @@ display: inline-block;
 }
 
 /* Aside elemenr inside the wrapper*/
-/*
+
 .wrapper-internal .main-container aside {
     width: 15%;
     min-width: 300px;
