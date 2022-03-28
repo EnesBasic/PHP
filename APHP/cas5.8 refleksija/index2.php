@@ -18,12 +18,16 @@ class User{
         return "This is my username <br>";
     }
 
+    protected function get_default(){
+        return "We Don't have User Data !!! <br>";
+    }
+
     public function __get($method){
         $method = "get_" . $method;
         if (method_exists($this, $method)){
             return $this->{$method}();
         }else{
-            return "It doesn't exist !";
+            return $this->get_default();
         }
     }
 
@@ -34,5 +38,6 @@ echo $user->username;
 echo $user->age;
 echo $user->fullname;
 
+echo $user->ne_postoji_nikako;
 
 ?>
