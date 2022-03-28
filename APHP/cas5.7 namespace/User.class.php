@@ -6,7 +6,7 @@ namespace Ja\Pravio\Klasu;
 
 class User{
     public function write(){
-        echo "<h2> Pozdrav 2 Svima! </h2> <br>";
+        echo "<h2> Pozdravi pozdravi! </h2> <br>";
     }
 };
 
