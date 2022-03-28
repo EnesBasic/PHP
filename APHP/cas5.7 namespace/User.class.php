@@ -1,12 +1,10 @@
 <?php
 
-namespace Ja\Pravio\Klasu;
-
-// Ovo je moja regularna klasa za korsinike, ja je pravio
+namespace Preuzeo\Sa\Interneta;
 
 class User{
     public function write(){
-        echo "<h2>Pozdravi, pozdravi! </h2> <br>";
+        echo "<h1> Pozdrav Svima! </h1> <br>";
     }
 }
 
