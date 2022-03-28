@@ -2,6 +2,7 @@
 
 
 class User{
+
     public function login(){
         echo "user is logged in";
     }
@@ -28,8 +29,5 @@ echo "<br>";
 var_dump(get_class_methods($user));
 echo "<hr>";
 var_dump(get_class_vars($user));
-echo "<hr>";
-
-
 
 ?>
