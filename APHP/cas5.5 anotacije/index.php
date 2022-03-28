@@ -39,7 +39,7 @@ class User{
     *@return string
     *
     */
-
+    # @method write;
     private function write() {
         return
         "Username: " . $this->username . 
