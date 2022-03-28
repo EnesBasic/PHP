@@ -5,7 +5,7 @@ ini_set ('log_errors', 'on');
 ini_set ('display_startup_errors', 'on');
 ini_set ('error_reporting', E_ALL);
 
-use Database\Connection as D;
+use Database\Connection as DC;
 
 require "Connection.class.php";
 require "Database.class.php";
