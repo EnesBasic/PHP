@@ -55,8 +55,8 @@ class Factory{
  * PIsem ovo:
  */
 
-echo $user = Factory::createUser();
-echo $admin = Factory::createAdmin();
-echo $superadmin = Factory::createSuperAdmin();
+$user = Factory::createUser();
+$admin = Factory::createUser("admin");
+$superadmin = Factory::createUser("SuperAdmin");
 
 
