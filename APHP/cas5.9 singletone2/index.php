@@ -12,6 +12,18 @@ class Connection{
 
         return self::$instance;
     }
+
+    public static function connect(){
+
+        $hostname = "localhost";
+        $user = "root";
+        $password = "";
+        $database = "user";
+
+        $connection = new mysqli($hostname, $user, $password, $database);
+        return $connection;
+        
+    }
 }
 
 $a = Connection::getInstance();
