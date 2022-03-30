@@ -1,6 +1,6 @@
 <?php
 
-class Conroller{
+class Controller{
     private $model;
 
     public function __construct(Model $model){
@@ -11,5 +11,3 @@ class Conroller{
         return $this->model->data;
     }
 }
-
-?>
