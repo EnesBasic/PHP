@@ -12,4 +12,4 @@ $model = new Model($page);
 $controller = new Controller($model);
 $view = new View($controller);
 
-echo $view->output();
+$view->output();

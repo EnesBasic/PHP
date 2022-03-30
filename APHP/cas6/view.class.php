@@ -8,7 +8,10 @@ class View{
     }
 
     public function output(){
+        
+        require $this->controller->model->page . ".view.php";
+
         // Ovo je Pogled
-        return "<h1>" . $this->controller->getData(). "</h1>";
+        //return "<h1>" . $this->controller->getData(). "</h1>";
     }
 }
