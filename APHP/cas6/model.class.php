@@ -2,9 +2,11 @@
 
 class Model{
     public $data;
-    public function __construct(){
+    public function __construct($page){
         
+
+
         //Zamislimo da smo otisli u bazu, dobavili podatak i sacuvali ga u data
-        $this->data ="Hello World";
+        $this->data ="Hello from " .$page. " stranice!";
     }
 }
