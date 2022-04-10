@@ -7,8 +7,8 @@
 <html>
 	<?php
             if(isset($_GET["username"])){
-                if(file_exists["users-data.json"]){
-                    $users_data = file_get_contents("users-data.json");
+                if(file_exists['users-data.json']){
+                    $users_data = file_get_contents('users-data.json');
                     $users_data = json_decode($users_data, true);
                     
                     $username = $_GET["user"];
