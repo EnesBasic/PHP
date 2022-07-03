@@ -1,16 +1,3 @@
-
-//console.log("Hello World"); //semicolon is optional
-
-//window.alert("Hello student")
-
-/*
-This
-is 
-multiline
-comment
-*/
-
-//
 let firstname = "Enes"; // strings
 let age = 40; // numbers
 age = age + 2;
